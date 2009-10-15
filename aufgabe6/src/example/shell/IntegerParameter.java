@@ -4,8 +4,8 @@ public class IntegerParameter extends Parameter {
 
 	private int value;
 	
-	public IntegerParameter(String name) {
-		super(name);
+	public IntegerParameter(String name, String description) {
+		super(name, description);
 	}
 
 	@Override
@@ -25,6 +25,11 @@ public class IntegerParameter extends Parameter {
 	@Override
 	public String getValueAsString() {
 		return String.valueOf(value);
+	}
+
+	@Override
+	protected Object clone() throws CloneNotSupportedException {
+		return new IntegerParameter(getName(), getDescription());
 	}
 
 }
