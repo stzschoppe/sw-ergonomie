@@ -30,7 +30,7 @@ import shell.tools.HaltCommand;
     	Command echoCommand = (new Command("echo", "Gibt nen Text aus", new CommandHandler(){
 			@Override
 			public void execute(Command command) {
-				zeichneSchwarz();				
+				Shell.getInstance().out(command.getParameterByName("text").getValueAsString());				
 			}}));
     	echoCommand.addParameter(new StringParameter("text", "anzugeigender Text"));
     	Shell.getInstance().addCommand(echoCommand);
