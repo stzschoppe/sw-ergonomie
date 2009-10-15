@@ -27,7 +27,7 @@ public class Shell {
 		this.defaultContext = new Context("default", ">");
 		setActiveContext(defaultContext);
 		addCommand(new shell.tools.ShowAllCommandsCommand("?", "Zeigt eine Liste aller möglichen Befehle an."));
-		addCommand(new shell.tools.ShowAllCommandsWithHelpCommand("?", "Zeigt eine Liste aller möglichen Befehle mit Hilfe an."));
+		addCommand(new shell.tools.ShowAllCommandsWithHelpCommand("??", "Zeigt eine Liste aller möglichen Befehle mit Hilfe an."));
 	}
 	
 	public void run(){
@@ -94,6 +94,11 @@ public class Shell {
         		calledCommand = (Command) command.clone();
         	}
         }
+        
+        if (calledCommand==null) {
+        	throw new IllegalArgumentException("Befehl unbekannt.\nGeben Sie \"?\" ein um eine Liste möglicher Befehle anzuzeigen.");
+        }
+        
         for (int x=0; x<calledCommand.getParameters().size(); x++) {
         	Parameter currentParameter=calledCommand.getParameters().get(x);
         	if(tokenizer.hasMoreTokens()) {
