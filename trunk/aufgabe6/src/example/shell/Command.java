@@ -85,6 +85,16 @@ public class Command {
 	public ArrayList<Parameter> getParameters() {
 		return parameters;
 	}
+	
+	public Parameter getParameterByName(String name) {
+		for (int x=0; x<getParameters().size(); x++) {
+			Parameter currentParameter = getParameters().get(x);
+			if (currentParameter.getName().equals(name)) {
+				return currentParameter;
+			}
+		}
+		throw new IllegalArgumentException("Kein Parameter mit dem Namen "+name+".");
+	}
 
 
 
