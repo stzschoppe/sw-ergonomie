@@ -1,6 +1,8 @@
 package shell;
 
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 
 public class Context {
 	private ArrayList<Command> commands;
@@ -15,6 +17,10 @@ public class Context {
 	
 	public void addCommand(Command command)
 	{}
+	
+	public Collection<Command> getCommands() {
+		return Collections.unmodifiableCollection(commands);
+	}
 	
 	public String getName() {
 		return name;
