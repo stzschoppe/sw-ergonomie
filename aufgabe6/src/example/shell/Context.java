@@ -4,6 +4,12 @@ import java.util.ArrayList;
 
 public class Context {
 	private ArrayList<Command> commands;
+	private String name;
+	
+	public Context(String name){
+		this.name = name;
+	}
+	
 	
 	public void addCommand(Command command)
 	{}
