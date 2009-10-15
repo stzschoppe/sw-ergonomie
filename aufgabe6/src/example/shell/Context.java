@@ -5,17 +5,18 @@ import java.util.ArrayList;
 public class Context {
 	private ArrayList<Command> commands;
 	
-	public void addCommand(){};
+	public void addCommand(Command command)
+	{}
 	
-	public String showAllCommand(){
-		return null;
+	public void showAllCommands(){
+		
 	}
 	
-	public String showAllCommandWithHelp(){
-		return null;
+	public void showAllCommandsWithHelp(){
+		
 	}
 	
-	public String showAllCommandStartingWith(String str){
-		return null;
+	public void showAllCommandsStartingWith(String str){
+		
 	}
 }
