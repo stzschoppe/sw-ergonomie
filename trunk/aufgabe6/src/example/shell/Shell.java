@@ -41,6 +41,7 @@ public class Shell {
 		this.defaultContext = new Context("default", "",  ">");
 		setActiveContext(defaultContext);
 		addCommand(new shell.tools.ShowAllCommandsCommand("?", "Zeigt eine Liste aller möglichen Befehle an."));
+		addCommand(new shell.tools.ShowCommandHelpCommand("?", "Zeigt die Hilfe zu einem Befehl an."));
 		addCommand(new shell.tools.ShowAllCommandsWithHelpCommand("??", "Zeigt eine Liste aller möglichen Befehle mit Hilfe an."));
 	}
 	
