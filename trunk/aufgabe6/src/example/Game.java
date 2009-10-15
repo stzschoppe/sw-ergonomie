@@ -30,7 +30,7 @@ import shell.tools.HaltCommand;
     	echoCommand.addParameter(new StringParameter("text", "anzugeigender Text"));
     	Shell.getInstance().addCommand(echoCommand);
     	
-    	Shell.getInstance().setDescription("Sie Sind im Kino");
+    	Shell.getInstance().setDescription("Sie Sind im Kino.");
     	        bild   = new Picture();    }    /**     *  Zentrale Verarbeitungsschleife.     */    public void play()     {                    // Solange Befehle lesen, analysieren und ausfuehren,        // bis "true" zurueckgegeben wird        
     	Shell.getInstance().outln(">>> Willkommen im Kino <<<"
     			+ "\n" + "Unser Programm besteht derzeit aus zwei Standbildern,."
