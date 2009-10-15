@@ -74,7 +74,7 @@ public class SymbolParameter extends Parameter {
 	
 	@Override
 	public String toString(){
-		return getName()+"    "+getDescription()+" ("+getType()+")" + "\n            " +
+		return getName()+"    "+getDescription() + ", " +
 		"mögliche Werte sind: " + validSymbols;
 	}
 
