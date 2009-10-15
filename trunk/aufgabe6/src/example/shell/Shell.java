@@ -2,7 +2,6 @@ package shell;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
-import java.util.ArrayList;
 import java.util.StringTokenizer;
 
 /**
@@ -23,7 +22,12 @@ public class Shell {
 	
 	public void run(){
 		while (run) {
-			readCommand();
+			try {
+				Command command = readCommand();
+				command.executeHandler();
+			} catch (IllegalArgumentException exception) {
+				out(exception.getMessage());
+			}
 		}
 	}
 	
@@ -56,7 +60,7 @@ public class Shell {
             inputLine = reader.readLine();
         }
         catch(java.io.IOException exc) {
-            System.out.println ("There was an error during reading: "+ exc.getMessage());
+            System.out.println ("Fehler beim Lesen: "+ exc.getMessage());
         }
 
         StringTokenizer tokenizer = new StringTokenizer(inputLine);
@@ -77,18 +81,15 @@ public class Shell {
         		try {
         			currentParameter.setValue(tokenizer.nextToken());
         		} catch(IllegalArgumentException exception) {
-        			throw new RuntimeException("Argument mismatch. Wrong argument data type.\nExpected "+currentParameter.getType());
+        			throw new IllegalArgumentException("Argumente passen nicht: Falscher Datentyp für das Argument "+currentParameter.getName()+", erwartet "+currentParameter.getType()+".\n"+exception.getMessage());
         		}
         	} else {
-        		throw new RuntimeException("Argument mismatch. Too few arguments given.\nExpected "+currentParameter.getName());
+        		throw new IllegalArgumentException("Argumente passen nicht: Zu wenige Argumente.\nErwartetes Argument: "+currentParameter.getName()+".");
         	}
         }
          
         return calledCommand;
 
     }
-	
-	
-	
 
 }
