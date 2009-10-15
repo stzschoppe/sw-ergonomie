@@ -118,8 +118,6 @@ public class Shell {
         
         int givenParameterCount = tokenizer.countTokens();
         
-        System.out.println(givenParameterCount);
-        
         for (Command command : getActiveContext().getCommands()) {
         	if (command.getName().equals(commandString)) {
         		if (calledCommand==null || command.getParameters().size()==givenParameterCount) {
