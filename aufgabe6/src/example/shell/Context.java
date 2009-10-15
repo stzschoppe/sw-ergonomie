@@ -55,6 +55,7 @@ public class Context {
 	    for (Command command:commands) {
 	    	Shell.getInstance().outln(command.getName());
 	    }
+	    Shell.getInstance().outln("Geben Sie \"??\" ein um eine Liste der Befehle mit zugehöriger Hilfe anzuzeigen.");
 	}
 	
 	public void showAllCommandsWithHelp(){
