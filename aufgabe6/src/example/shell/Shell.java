@@ -14,8 +14,9 @@ public class Shell {
 	private Context defaultContext;
 	
 	public Shell(){
-		this.defaultContext = new Context("Default");
+		this.defaultContext = new Context("default", ">");
 		addContext(defaultContext);
+		setActiveContext(defaultContext);
 	}
 	
 	public void run(){
