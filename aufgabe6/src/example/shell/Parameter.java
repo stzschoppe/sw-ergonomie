@@ -15,6 +15,8 @@ public abstract class Parameter {
 	 */
 	private final String description;
 	
+	public abstract String getType();
+	
 	/**
 	 * Setzt den Wert des Parameters. Die Methode validiert voher den
 	 * übergebenen Wert. Passt dieser nicht zum Parametertyp, 
