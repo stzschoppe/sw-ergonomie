@@ -15,8 +15,9 @@ public class Context {
 		this.commands = new ArrayList<Command>(); 
 	}
 	
-	public void addCommand(Command command)
-	{}
+	public void addCommand(Command command) {
+		commands.add(command);
+	}
 	
 	public Collection<Command> getCommands() {
 		return Collections.unmodifiableCollection(commands);
@@ -32,14 +33,34 @@ public class Context {
 	
 	public void setPrompt(String prompt) {
 		this.prompt = prompt;
-	}	
+	}
 	
-	public void showAllCommands(){
+	public void showCommandWithHelp(String commandString) {
+		for (Command command:commands) {
+			if (command.getName().equals(commandString)) {
+				Shell.getInstance().out(command.getName());
+				for (int x=0; x<command.getParameters().size(); x++) {
+					Shell.getInstance().out(command.getParameters().get(x).getName());
+				}
+				Shell.getInstance().outln(""); Shell.getInstance().outln("");
+				for (int x=0; x<command.getParameters().size(); x++) {
+					Shell.getInstance().outln("    "+command.getParameters().get(x).getName()+"    "+command.getParameters().get(x).getDescription());
+				}
+			}
+		}
 		
 	}
 	
+	public void showAllCommands(){
+	    for (Command command:commands) {
+	    	Shell.getInstance().outln(command.getName());
+	    }
+	}
+	
 	public void showAllCommandsWithHelp(){
-		
+	    for (Command command:commands) {
+	    	Shell.getInstance().outln(command.getName()+"    "+command.getDescription());
+	    }
 	}
 	
 	public void showAllCommandsStartingWith(String str){
