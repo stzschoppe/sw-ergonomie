@@ -47,7 +47,7 @@ public class Command {
 	 * @see java.lang.Object#clone()
 	 */
 	@Override
-	protected Object clone() throws CloneNotSupportedException {
+	protected Object clone() {
 		Command command = new Command(name, description, handler);
 		for (int x=0; x<parameters.size(); x++) {
 			command.addParameter((Parameter)parameters.get(x).clone());
