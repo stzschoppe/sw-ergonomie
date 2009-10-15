@@ -66,5 +66,5 @@ public abstract class Parameter {
 	}
 
 	@Override
-	abstract protected Object clone() throws CloneNotSupportedException;
+	abstract protected Object clone();
 }
