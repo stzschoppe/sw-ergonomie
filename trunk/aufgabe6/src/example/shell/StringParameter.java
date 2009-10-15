@@ -2,8 +2,8 @@ package shell;
 
 public class StringParameter extends Parameter{
 
-	public StringParameter(String name) {
-		super(name);
+	public StringParameter(String name, String description) {
+		super(name, description);
 	}
 
 	private String value;
@@ -22,6 +22,11 @@ public class StringParameter extends Parameter{
 	@Override
 	public String getValueAsString() {
 		return value;
+	}
+	
+	@Override
+	protected Object clone() throws CloneNotSupportedException {
+		return new StringParameter(getName(), getDescription());
 	}
 
 }

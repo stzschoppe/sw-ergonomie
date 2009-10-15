@@ -1,16 +1,25 @@
 package shell;
 
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 
 public class SymbolParameter extends Parameter {
-	public SymbolParameter(String name, ArrayList<String> validSymbols) {
-		super(name);
+	public SymbolParameter(String name, String description, ArrayList<String> validSymbols) {
+		super(name, description);
 		this.validSymbols = validSymbols;
 	}
 
 	private String value;
-	private ArrayList<String> validSymbols;
+	private final ArrayList<String> validSymbols;
 	
+	/**
+	 * @return the validSymbols
+	 */
+	Collection<String> getValidSymbols() {
+		return Collections.unmodifiableCollection(validSymbols);
+	}
+
 	@Override
 	public void setValue(String value) {
 		if (validSymbols.contains(value)) {
@@ -31,4 +40,9 @@ public class SymbolParameter extends Parameter {
 		return value;
 	}
 
+	@Override
+	protected Object clone() throws CloneNotSupportedException {
+		return new SymbolParameter(getName(), getDescription(), validSymbols);
+	}	
+	
 }
