@@ -37,7 +37,7 @@ public class Shell {
 				Command command = readCommand();
 				command.executeHandler();
 			} catch (IllegalArgumentException exception) {
-				out(exception.getMessage());
+				outln(exception.getMessage());
 			}
 		}
 	}
