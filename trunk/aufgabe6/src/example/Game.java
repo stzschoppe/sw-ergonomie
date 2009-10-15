@@ -1,6 +1,7 @@
 import shell.Command;
 import shell.CommandHandler;
 import shell.Shell;
+import shell.StringParameter;
 import shell.tools.HaltCommand;
 
  
@@ -25,7 +26,17 @@ import shell.tools.HaltCommand;
 			}}));
     	
     	Shell.getInstance().addCommand(new HaltCommand("stop", "mach aus"));
-            bild   = new Picture();    }    /**     *  Zentrale Verarbeitungsschleife.     */    public void play()     {                    // Solange Befehle lesen, analysieren und ausfuehren,        // bis "true" zurueckgegeben wird        
+    	
+    	Command echoCommand = (new Command("echo", "Gibt nen Text aus", new CommandHandler(){
+			@Override
+			public void execute(Command command) {
+				zeichneSchwarz();				
+			}}));
+    	echoCommand.addParameter(new StringParameter("text", "anzugeigender Text"));
+    	Shell.getInstance().addCommand(echoCommand);
+    	
+    	Shell.getInstance().setDescription("Sie Sind im Kino");
+    	        bild   = new Picture();    }    /**     *  Zentrale Verarbeitungsschleife.     */    public void play()     {                    // Solange Befehle lesen, analysieren und ausfuehren,        // bis "true" zurueckgegeben wird        
     	Shell.getInstance().outln(">>> Willkommen im Kino <<<"
     			+ "\n" + "Unser Programm besteht derzeit aus zwei Standbildern,."
     			+ "\n" + "einem farbigen und einem Schwarz-Weiß-Bild"
