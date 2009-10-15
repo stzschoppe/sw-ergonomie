@@ -18,6 +18,12 @@ import shell.tools.HaltCommand;
 				zeichneSchwarz();				
 			}}));
     	
+    	Shell.getInstance().addCommand(new Command("echo", "Gibt nen Text aus", new CommandHandler(){
+			@Override
+			public void execute(Command command) {
+				zeichneSchwarz();				
+			}}));
+    	
     	Shell.getInstance().addCommand(new HaltCommand("stop", "mach aus"));
             bild   = new Picture();    }    /**     *  Zentrale Verarbeitungsschleife.     */    public void play()     {                    // Solange Befehle lesen, analysieren und ausfuehren,        // bis "true" zurueckgegeben wird        
     	Shell.getInstance().out(">>> Willkommen im Kino <<<" + "\n" + "Unser Programm besteht derzeit aus zwei Standbildern,." + "\n" + "einem farbigen und einem Schwarz-Weiß-Bild" + "\n" + "Mit dem Kommando 'Hilfe' erhalten Sie eine Liste aller Kommandos");        Shell.getInstance().run();
