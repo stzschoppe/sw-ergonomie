@@ -13,6 +13,20 @@ import java.util.StringTokenizer;
 public class Shell {
 	private Context activeContext;
 	private Context defaultContext;
+	/**
+	 * @return the defaultContext
+	 */
+	Context getDefaultContext() {
+		return defaultContext;
+	}
+
+	/**
+	 * @param defaultContext the defaultContext to set
+	 */
+	void setDefaultContext(Context defaultContext) {
+		this.defaultContext = defaultContext;
+	}
+
 	private boolean run;
 	private static Shell instance;
 	
@@ -24,7 +38,7 @@ public class Shell {
 	}
 	
 	private Shell(){
-		this.defaultContext = new Context("default", ">");
+		this.defaultContext = new Context("default", "",  ">");
 		setActiveContext(defaultContext);
 		addCommand(new shell.tools.ShowAllCommandsCommand("?", "Zeigt eine Liste aller möglichen Befehle an."));
 		addCommand(new shell.tools.ShowAllCommandsWithHelpCommand("??", "Zeigt eine Liste aller möglichen Befehle mit Hilfe an."));
@@ -39,6 +53,7 @@ public class Shell {
 			} catch (IllegalArgumentException exception) {
 				outln(exception.getMessage());
 		    } catch (UnsupportedOperationException exception) {
+		    	outln("Befehl unbekannt.\n Meinten Sie einen der folgenden Befehle?\n");
 		    	getActiveContext().showAllCommandsStartingWith(exception.getMessage());
 		    }
 		}
@@ -67,6 +82,10 @@ public class Shell {
 
 	public void setActiveContext(Context activeContext) {
 		this.activeContext = activeContext;
+	}
+	
+	public void setDescription(String description) {
+		getDefaultContext().setDescription(description);
 	}
 	
 	private Command readCommand() {
@@ -102,7 +121,7 @@ public class Shell {
         }
         
         if (calledCommand==null) {
-        	throw new UnsupportedOperationException("Befehl unbekannt.\n Meinten Sie einen der folgenden Befehle?\n");
+        	throw new UnsupportedOperationException(commandString);
         }
         
         for (int x=0; x<calledCommand.getParameters().size(); x++) {
