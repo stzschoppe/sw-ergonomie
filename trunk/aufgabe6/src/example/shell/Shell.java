@@ -54,7 +54,12 @@ public class Shell {
 			} catch (IllegalArgumentException exception) {
 				outln(exception.getMessage());
 		    } catch (UnsupportedOperationException exception) {
-		    	outln("Befehl unbekannt.\n Meinten Sie einen der folgenden Befehle?\n");
+		    	outln("Befehl unbekannt.");
+		    	if (getActiveContext().hasCommandsStartingWith(exception.getMessage())) {
+		    		outln("Meinten Sie einen der folgenden Befehle?\n");
+		    	} else {
+		    		outln("Geben Sie \"?\" ein, um eine Liste der möglichen Befehle anzuzeigen.\n");
+		    	}
 		    	getActiveContext().showAllCommandsStartingWith(exception.getMessage());
 		    }
 		}
