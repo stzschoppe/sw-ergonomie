@@ -1,6 +1,8 @@
 package shell;
 
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 
 public class Command {
 	private final String name;
@@ -33,6 +35,10 @@ public class Command {
 	
 	public void addParameter(Parameter parameter) {
 		parameters.add(parameter);
+	}
+	
+	public ArrayList<Parameter> getParameters() {
+		return parameters;
 	}
 
 
