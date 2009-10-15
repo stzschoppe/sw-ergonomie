@@ -26,9 +26,11 @@ import shell.tools.HaltCommand;
     	
     	Shell.getInstance().addCommand(new HaltCommand("stop", "mach aus"));
             bild   = new Picture();    }    /**     *  Zentrale Verarbeitungsschleife.     */    public void play()     {                    // Solange Befehle lesen, analysieren und ausfuehren,        // bis "true" zurueckgegeben wird        
-    	Shell.getInstance().out(">>> Willkommen im Kino <<<" + "\n" + "Unser Programm besteht derzeit aus zwei Standbildern,." + "\n" + "einem farbigen und einem Schwarz-Weiß-Bild" + "\n" + "Mit dem Kommando 'Hilfe' erhalten Sie eine Liste aller Kommandos");        Shell.getInstance().run();
-            }    // Implementierung der Befehle:    /**     * Die Befehlsliste anzeigen     */    private void printHelp()     {        System.out.println("Sie sind im Kino.");        System.out.println();        System.out.println("Sie können folgende Kommandos geben:");
-        Shell.getInstance().getActiveContext().showAllCommands();    }    /**      * Farbige Szene anzeigen.     */    private void zeichneFarbig()     {        bild.setColor();    }    /**      * Schattenriss-Szene anzeigen.     */    private void zeichneSchwarz()     {        bild.setBlackAndWhite();    }
+    	Shell.getInstance().outln(">>> Willkommen im Kino <<<"
+    			+ "\n" + "Unser Programm besteht derzeit aus zwei Standbildern,."
+    			+ "\n" + "einem farbigen und einem Schwarz-Weiß-Bild"
+    			+ "\n" + "Mit dem Kommando '?' erhalten Sie eine Liste aller Kommandos");        Shell.getInstance().run();
+            }    // Implementierung der Befehle:    /**      * Farbige Szene anzeigen.     */    private void zeichneFarbig()     {        bild.setColor();    }    /**      * Schattenriss-Szene anzeigen.     */    private void zeichneSchwarz()     {        bild.setBlackAndWhite();    }
     
     /**
      * Startet das Beispiel auf der Kommandozeile.

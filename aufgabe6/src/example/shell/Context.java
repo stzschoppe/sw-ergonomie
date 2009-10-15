@@ -7,10 +7,12 @@ import java.util.Collections;
 public class Context {
 	private ArrayList<Command> commands;
 	private final String name;
+	private String description;
 	private String prompt;
 	
-	public Context(String name, String prompt){
+	public Context(String name, String description, String prompt){
 		this.name = name;
+		this.description = description;
 		this.prompt = prompt;
 		this.commands = new ArrayList<Command>(); 
 	}
@@ -34,6 +36,10 @@ public class Context {
 	public void setPrompt(String prompt) {
 		this.prompt = prompt;
 	}
+	
+	public void setDescription(String description) {
+		this.description = description;
+	}	
 	
 	public void showCommandWithHelp(String commandString) {
 		for (Command command:commands) {
