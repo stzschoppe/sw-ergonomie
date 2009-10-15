@@ -26,4 +26,22 @@ public class Shell {
 		// TODO Method-stub
 	}
 
+	public ArrayList<Context> getContexts() {
+		return contexts;
+	}
+
+	public void setContexts(ArrayList<Context> contexts) {
+		this.contexts = contexts;
+	}
+
+	public Context getActiveContext() {
+		return ActiveContext;
+	}
+
+	public void setActiveContext(Context activeContext) {
+		ActiveContext = activeContext;
+	}
+	
+	
+
 }
