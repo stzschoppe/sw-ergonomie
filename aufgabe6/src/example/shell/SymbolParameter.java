@@ -18,6 +18,16 @@ public class SymbolParameter extends Parameter {
 		super(name, description);
 		this.validSymbols = validSymbols;
 	}
+	
+	public SymbolParameter(String name, String description,
+			String... validSymbols)
+	{
+		super(name, description);
+		this.validSymbols = new ArrayList<String>();
+		for (String string : validSymbols) {
+			this.validSymbols.add(string);
+		}
+	}
 
 	/**
 	 * Wert des Parameters.
