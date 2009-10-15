@@ -69,6 +69,8 @@ public class Context {
 	}
 	
 	public void showAllCommandsWithHelp(){
+		Shell.getInstance().outln(getDescription());
+		Shell.getInstance().outln("Sie können die folgenden Befehle eingeben:");		
 	    for (Command command:commands) {
 	    	Shell.getInstance().out(command.toString());
 	    }
