@@ -6,5 +6,6 @@ public class Command {
 	private String name;
 	private CommandHandler handler;
 	private ArrayList<Parameter> parameters;
+	private String help;
 
 }
