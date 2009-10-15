@@ -67,4 +67,10 @@ public abstract class Parameter {
 
 	@Override
 	abstract protected Object clone();
+	
+	@Override
+	public String toString() {
+		return getName()+"    "+getDescription()+" ("+getType()+")";
+	}
+	
 }

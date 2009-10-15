@@ -110,6 +110,22 @@ public class Command {
 		return command;
 	}
 	
+	@Override
+	public String toString() {
+		String result = "    "+getName();
+		for (int x=0; x<getParameters().size(); x++) {
+			result += " <"+getParameters().get(x).getName()+">";
+		}
+		result+="\n        "+getDescription()+"\n";
+		if (!getParameters().isEmpty()) {
+			result+="        Parameter:\n";
+		    for (int x=0; x<getParameters().size(); x++) {
+    			result += "            "+getParameters().get(x).toString()+"\n";
+	    	}
+		}
+		return result;
+	}
+	
 	
 
 }

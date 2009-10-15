@@ -3,6 +3,7 @@ package shell;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
+import java.util.HashSet;
 
 public class Context {
 	private ArrayList<Command> commands;
@@ -48,14 +49,7 @@ public class Context {
 	public void showCommandWithHelp(String commandString) {
 		for (Command command:commands) {
 			if (command.getName().equals(commandString)) {
-				Shell.getInstance().out("    "+command.getName());
-				for (int x=0; x<command.getParameters().size(); x++) {
-					Shell.getInstance().out(command.getParameters().get(x).getName());
-				}
-				Shell.getInstance().outln(""); Shell.getInstance().outln("");
-				for (int x=0; x<command.getParameters().size(); x++) {
-					Shell.getInstance().outln("        "+command.getParameters().get(x).getName()+"    "+command.getParameters().get(x).getDescription());
-				}
+				Shell.getInstance().out(command.toString());
 			}
 		}
 		
@@ -64,15 +58,19 @@ public class Context {
 	public void showAllCommands(){
 		Shell.getInstance().outln(getDescription());
 		Shell.getInstance().outln("Sie können die folgenden Befehle eingeben:");
+		HashSet<String> commandsSet = new HashSet<String>();
 	    for (Command command:commands) {
-	    	Shell.getInstance().outln("    "+command.getName());
+            commandsSet.add(command.getName());	    		
+	    }
+	    for (String commandString : commandsSet) {
+	    	Shell.getInstance().outln("    "+commandString);
 	    }
 	    Shell.getInstance().outln("Geben Sie \"??\" ein um eine Liste der Befehle mit zugehöriger Hilfe anzuzeigen.");
 	}
 	
 	public void showAllCommandsWithHelp(){
 	    for (Command command:commands) {
-	    	Shell.getInstance().outln("    "+command.getName()+"    "+command.getDescription());
+	    	Shell.getInstance().out(command.toString());
 	    }
 	}
 	
@@ -87,10 +85,14 @@ public class Context {
 	}	
 	
 	public void showAllCommandsStartingWith(String prefix){
+		HashSet<String> commandsSet = new HashSet<String>();
 	    for (Command command:commands) {
 	    	if (command.getName().startsWith(prefix)) {
-                Shell.getInstance().outln("    "+command.getName());	    		
+                commandsSet.add(command.getName());	    		
 	    	}
+	    }
+	    for (String commandString : commandsSet) {
+	    	Shell.getInstance().outln("    "+commandString);
 	    }
 	}
 }
