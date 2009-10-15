@@ -64,7 +64,11 @@ public class Context {
 	    }
 	}
 	
-	public void showAllCommandsStartingWith(String str){
-		
+	public void showAllCommandsStartingWith(String prefix){
+	    for (Command command:commands) {
+	    	if (command.getName().startsWith(prefix)) {
+                Shell.getInstance().outln(command.getName());	    		
+	    	}
+	    }
 	}
 }
