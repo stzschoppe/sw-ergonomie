@@ -118,9 +118,11 @@ public class Shell {
         
         int givenParameterCount = tokenizer.countTokens();
         
+        System.out.println(givenParameterCount);
+        
         for (Command command : getActiveContext().getCommands()) {
         	if (command.getName().equals(commandString)) {
-        		if (calledCommand==null || calledCommand.getParameters().size()==givenParameterCount) {
+        		if (calledCommand==null || command.getParameters().size()==givenParameterCount) {
         		    calledCommand = (Command) command.clone();
         		}
         	}
