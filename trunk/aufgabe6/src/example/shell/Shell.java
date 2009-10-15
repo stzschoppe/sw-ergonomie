@@ -2,27 +2,37 @@ package shell;
 
 import java.util.ArrayList;
 
+/**
+ * This class represents a command shell and is the interface for any user. 
+ * The class has a ArrayList of all possible contexts. A Context is a 
+ * @author Pascal Staudenrauﬂ
+ *
+ */
 public class Shell {
 	private ArrayList<Context> contexts;
-	private Context ActiveContext;
+	private Context activeContext;
+	private Context defaultContext;
 	
-	public Shell(Context DefaultContext){
-		ActiveContext = DefaultContext;
+	public Shell(){
+		this.defaultContext = new Context("Default");
+		addContext(defaultContext);
 	}
 	
 	public void run(){
 		//TODO Method-stub
 	}
 	
-	public void addContext(){
-		//TODO Method-stub
+	public void addCommand(Command command){
+		
+		defaultContext.addCommand(command);
 	}
 	
-	public void setActiveContext(){
-		//TODO Method-stub
+	public void addContext(Context context){
+		contexts.add(context);
 	}
 	
-	public void out(String out){
+	
+	public static void out(String out){
 		// TODO Method-stub
 	}
 
@@ -35,11 +45,11 @@ public class Shell {
 	}
 
 	public Context getActiveContext() {
-		return ActiveContext;
+		return activeContext;
 	}
 
 	public void setActiveContext(Context activeContext) {
-		ActiveContext = activeContext;
+		this.activeContext = activeContext;
 	}
 	
 	
