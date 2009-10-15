@@ -23,7 +23,7 @@ public class Shell {
 		return instance;
 	}
 	
-	public Shell(){
+	private Shell(){
 		this.defaultContext = new Context("default", ">");
 		setActiveContext(defaultContext);
 		addCommand(new shell.tools.ShowAllCommandsCommand("?", "Zeigt eine Liste aller möglichen Befehle an."));
