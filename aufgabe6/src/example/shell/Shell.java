@@ -13,14 +13,25 @@ import java.util.StringTokenizer;
 public class Shell {
 	private Context activeContext;
 	private Context defaultContext;
-	private boolean run=true;
+	private boolean run;
+	private static Shell instance;
+	
+	public static Shell getInstance() {
+		if (instance==null) {
+			instance = new Shell();
+		}
+		return instance;
+	}
 	
 	public Shell(){
 		this.defaultContext = new Context("default", ">");
 		setActiveContext(defaultContext);
+		addCommand(new shell.tools.ShowAllCommandsCommand("?", "Zeigt eine Liste aller möglichen Befehle an."));
+		addCommand(new shell.tools.ShowAllCommandsWithHelpCommand("?", "Zeigt eine Liste aller möglichen Befehle mit Hilfe an."));
 	}
 	
 	public void run(){
+		run = true;
 		while (run) {
 			try {
 				Command command = readCommand();
@@ -31,12 +42,20 @@ public class Shell {
 		}
 	}
 	
+	public void halt() {
+		run=false;
+	}
+	
 	public void addCommand(Command command){
 		
 		defaultContext.addCommand(command);
 	}
 	
-	public static void out(String out){
+	public void out(String out){
+		System.out.print(out);
+	}	
+	
+	public void outln(String out){
 		System.out.println(out);
 	}
 
