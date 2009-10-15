@@ -23,7 +23,7 @@ public class StringParameter extends Parameter{
 	public String getValueAsString() {
 		return value;
 	}
-	
+
 	@Override
 	protected Object clone() throws CloneNotSupportedException {
 		return new StringParameter(getName(), getDescription());
