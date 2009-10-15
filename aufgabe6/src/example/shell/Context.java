@@ -76,6 +76,16 @@ public class Context {
 	    }
 	}
 	
+	public boolean hasCommandsStartingWith(String prefix){
+		boolean found=false;
+	    for (Command command:commands) {
+	    	if (command.getName().startsWith(prefix)) {
+	    		found=true;    		
+	    	}
+	    }
+	    return found;
+	}	
+	
 	public void showAllCommandsStartingWith(String prefix){
 	    for (Command command:commands) {
 	    	if (command.getName().startsWith(prefix)) {
