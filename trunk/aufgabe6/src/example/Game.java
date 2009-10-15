@@ -19,18 +19,13 @@ import shell.tools.HaltCommand;
 				zeichneSchwarz();				
 			}}));
     	
-    	Shell.getInstance().addCommand(new Command("echo", "Gibt nen Text aus", new CommandHandler(){
-			@Override
-			public void execute(Command command) {
-				zeichneSchwarz();				
-			}}));
-    	
     	Shell.getInstance().addCommand(new HaltCommand("stop", "mach aus"));
+    	
     	
     	Command echoCommand = (new Command("echo", "Gibt nen Text aus", new CommandHandler(){
 			@Override
 			public void execute(Command command) {
-				Shell.getInstance().out(command.getParameterByName("text").getValueAsString());				
+				Shell.getInstance().outln(command.getParameterByName("text").getValueAsString());				
 			}}));
     	echoCommand.addParameter(new StringParameter("text", "anzugeigender Text"));
     	Shell.getInstance().addCommand(echoCommand);
