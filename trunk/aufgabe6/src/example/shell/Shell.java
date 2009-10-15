@@ -38,7 +38,9 @@ public class Shell {
 				command.executeHandler();
 			} catch (IllegalArgumentException exception) {
 				outln(exception.getMessage());
-			}
+		    } catch (UnsupportedOperationException exception) {
+		    	getActiveContext().showAllCommandsStartingWith(exception.getMessage());
+		    }
 		}
 	}
 	
@@ -89,14 +91,18 @@ public class Shell {
         else
             commandString = null;
         
+        int givenParameterCount = tokenizer.countTokens();
+        
         for (Command command : getActiveContext().getCommands()) {
         	if (command.getName().equals(commandString)) {
-        		calledCommand = (Command) command.clone();
+        		if (calledCommand==null || calledCommand.getParameters().size()==givenParameterCount) {
+        		    calledCommand = (Command) command.clone();
+        		}
         	}
         }
         
         if (calledCommand==null) {
-        	throw new IllegalArgumentException("Befehl unbekannt.\nGeben Sie \"?\" ein um eine Liste möglicher Befehle anzuzeigen.");
+        	throw new UnsupportedOperationException("Befehl unbekannt.\n Meinten Sie einen der folgenden Befehle?\n");
         }
         
         for (int x=0; x<calledCommand.getParameters().size(); x++) {
