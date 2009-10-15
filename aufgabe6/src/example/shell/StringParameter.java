@@ -25,8 +25,13 @@ public class StringParameter extends Parameter{
 	}
 
 	@Override
-	protected Object clone() throws CloneNotSupportedException {
+	protected Object clone() {
 		return new StringParameter(getName(), getDescription());
+	}
+
+	@Override
+	public String getType() {
+		return "string";
 	}
 
 }

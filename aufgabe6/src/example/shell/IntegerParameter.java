@@ -41,7 +41,12 @@ public class IntegerParameter extends Parameter {
 	}
 
 	@Override
-	protected Object clone() throws CloneNotSupportedException {
+	protected Object clone() {
 		return new IntegerParameter(getName(), getDescription());
+	}
+
+	@Override
+	public String getType() {
+		return "integer";
 	}
 }

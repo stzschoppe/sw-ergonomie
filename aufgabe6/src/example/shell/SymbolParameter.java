@@ -53,8 +53,13 @@ public class SymbolParameter extends Parameter {
 	}
 
 	@Override
-	protected Object clone() throws CloneNotSupportedException {
+	protected Object clone() {
 		return new SymbolParameter(getName(), getDescription(), validSymbols);
+	}
+
+	@Override
+	public String getType(){
+		return "symbol";
 	}
 
 }
