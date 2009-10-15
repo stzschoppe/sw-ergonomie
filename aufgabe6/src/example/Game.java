@@ -15,7 +15,7 @@ import shell.Shell;
 			}});
     	Shell.getInstance().addCommand(tempCommand);
     	
-    	tempCommand = new Command("scharz", "mach schwarz", new CommandHandler(){
+    	tempCommand = new Command("schwarz", "mach schwarz", new CommandHandler(){
 
 			@Override
 			public void execute(Command command) {
@@ -38,9 +38,9 @@ import shell.Shell;
 				shell.halt();				
 			}});
     	Shell.getInstance().addCommand(tempCommand);
-		
-        Shell.getInstance().out(">>> Willkommen im Kino <<<" + "\n" + "Unser Programm besteht derzeit aus zwei Standbildern,." + "\n" + "einem farbigen und einem Schwarz-Weiß-Bild" + "\n" + "Mit dem Kommando 'Hilfe' erhalten Sie eine Liste aller Kommandos");
-        	        bild   = new Picture();    }    /**     *  Zentrale Verarbeitungsschleife.     */    public void play()     {                    // Solange Befehle lesen, analysieren und ausfuehren,        // bis "true" zurueckgegeben wird                        shell.run();    }    // Implementierung der Befehle:    /**     * Die Befehlsliste anzeigen     */    private void printHelp()     {        System.out.println("Sie sind im Kino.");        System.out.println();        System.out.println("Sie können folgende Kommandos geben:");
+    	        bild   = new Picture();    }    /**     *  Zentrale Verarbeitungsschleife.     */    public void play()     {                    // Solange Befehle lesen, analysieren und ausfuehren,        // bis "true" zurueckgegeben wird        
+    	Shell.getInstance().out(">>> Willkommen im Kino <<<" + "\n" + "Unser Programm besteht derzeit aus zwei Standbildern,." + "\n" + "einem farbigen und einem Schwarz-Weiß-Bild" + "\n" + "Mit dem Kommando 'Hilfe' erhalten Sie eine Liste aller Kommandos");        Shell.getInstance().run();
+            }    // Implementierung der Befehle:    /**     * Die Befehlsliste anzeigen     */    private void printHelp()     {        System.out.println("Sie sind im Kino.");        System.out.println();        System.out.println("Sie können folgende Kommandos geben:");
         shell.getActiveContext().showAllCommands();    }    /**      * Farbige Szene anzeigen.     */    private void zeichneFarbig()     {        bild.setColor();    }    /**      * Schattenriss-Szene anzeigen.     */    private void zeichneSchwarz()     {        bild.setBlackAndWhite();    }
     
     /**
