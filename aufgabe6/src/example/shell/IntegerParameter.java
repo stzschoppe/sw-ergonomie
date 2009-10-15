@@ -1,9 +1,21 @@
 package shell;
 
+/**
+ * Klasse zur Speicherung von Integer-Parametern.
+ * @author stephan
+ *
+ */
 public class IntegerParameter extends Parameter {
 
+	/**
+	 * Wert des Parameters.
+	 */
 	private int value;
-	
+
+	/**
+	 * Konstruktor zum erzeugen eines leeren IntegerParameters.
+	 * @param name Der Name des Parameters.
+	 */
 	public IntegerParameter(String name, String description) {
 		super(name, description);
 	}
@@ -13,7 +25,8 @@ public class IntegerParameter extends Parameter {
 		try {
 			this.value = Integer.valueOf(value);
 		} catch (Exception e) {
-			throw new IllegalArgumentException();
+			throw new IllegalArgumentException("Der angegebene Parameter "
+					+ value + " ist kein gültiger Integerwert.");
 		}
 	}
 
@@ -31,5 +44,4 @@ public class IntegerParameter extends Parameter {
 	protected Object clone() throws CloneNotSupportedException {
 		return new IntegerParameter(getName(), getDescription());
 	}
-
 }
