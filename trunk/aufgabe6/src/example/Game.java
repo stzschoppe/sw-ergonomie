@@ -2,6 +2,7 @@ import shell.Command;
 import shell.CommandHandler;
 import shell.Shell;
 import shell.StringParameter;
+import shell.SymbolParameter;
 import shell.tools.HaltCommand;
 
  
@@ -28,7 +29,21 @@ import shell.tools.HaltCommand;
 				Shell.getInstance().outln(command.getParameterByName("text").getValueAsString());				
 			}}));
     	echoCommand.addParameter(new StringParameter("text", "anzugeigender Text"));
+    	
     	Shell.getInstance().addCommand(echoCommand);
+    	
+    	Command zeigeCommand = new Command("zeige", "Zeige ein Bild", new CommandHandler(){
+			@Override
+			public void execute(Command command) {
+				if (command.getParameterByName("modus").getValueAsString().equals("farbig")) {
+					zeichneFarbig();
+				} else {
+					zeichneSchwarz();
+				}
+			}
+			});
+    	zeigeCommand.addParameter(new SymbolParameter("modus", "Bildschirmodus", "schwarz", "farbig"));
+    	Shell.getInstance().addCommand(zeigeCommand);
     	
     	Shell.getInstance().setDescription("Sie Sind im Kino.");
     	        bild   = new Picture();    }    /**     *  Zentrale Verarbeitungsschleife.     */    public void play()     {                    // Solange Befehle lesen, analysieren und ausfuehren,        // bis "true" zurueckgegeben wird        
