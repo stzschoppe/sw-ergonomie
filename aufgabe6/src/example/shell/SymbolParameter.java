@@ -1,38 +1,50 @@
 package shell;
 
 import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
 
 public class SymbolParameter extends Parameter {
-	public SymbolParameter(String name, String description, ArrayList<String> validSymbols) {
+	/**
+	 * Konstruktor zum erzeugen eines leeren SymbolParameters.
+	 * 
+	 * @param name
+	 *            Der Name des Parameters.
+	 * @param validSymbols
+	 *            Eine <code>ArrayList</code> von Strings der erlaubten Symbole
+	 */
+	public SymbolParameter(String name, String description,
+			ArrayList<String> validSymbols)
+
+	{
 		super(name, description);
 		this.validSymbols = validSymbols;
 	}
 
-	private String value;
-	private final ArrayList<String> validSymbols;
-	
 	/**
-	 * @return the validSymbols
+	 * Wert des Parameters.
 	 */
-	Collection<String> getValidSymbols() {
-		return Collections.unmodifiableCollection(validSymbols);
-	}
+	private String value;
+
+	/**
+	 * Liste der gültigen Symbole.
+	 */
+	private ArrayList<String> validSymbols;
 
 	@Override
 	public void setValue(String value) {
 		if (validSymbols.contains(value)) {
 			this.value = value;
 		} else {
-			throw new IllegalArgumentException();
+			throw new IllegalArgumentException("Der angegebene Parameter "
+					+ value + " gehört nicht zu den zulässigen Werten: "
+					+ validSymbols);
 		}
-		
+
 	}
 
 	@Override
 	public int getValueAsInteger() {
-		throw new UnsupportedOperationException();
+		throw new UnsupportedOperationException(
+				"Der Parameter ist ein Symbol und kann darum nicht als Integer dargestellt werden.");
 	}
 
 	@Override
@@ -43,6 +55,6 @@ public class SymbolParameter extends Parameter {
 	@Override
 	protected Object clone() throws CloneNotSupportedException {
 		return new SymbolParameter(getName(), getDescription(), validSymbols);
-	}	
-	
+	}
+
 }
