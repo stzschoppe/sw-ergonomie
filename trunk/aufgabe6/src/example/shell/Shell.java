@@ -55,12 +55,12 @@ public class Shell {
 				outln(exception.getMessage());
 		    } catch (UnsupportedOperationException exception) {
 		    	outln("Befehl unbekannt.");
-		    	if (getActiveContext().hasCommandsStartingWith(exception.getMessage())) {
-		    		outln("Meinten Sie einen der folgenden Befehle?\n");
+		    	if (exception.getMessage()!=null && getActiveContext().hasCommandsStartingWith(exception.getMessage())) {
+		    		outln("Meinten Sie einen der folgenden Befehle?");
+			    	getActiveContext().showAllCommandsStartingWith(exception.getMessage());
 		    	} else {
-		    		outln("Geben Sie \"?\" ein, um eine Liste der möglichen Befehle anzuzeigen.\n");
+		    		outln("Geben Sie \"?\" ein, um eine Liste der möglichen Befehle anzuzeigen.");
 		    	}
-		    	getActiveContext().showAllCommandsStartingWith(exception.getMessage());
 		    }
 		}
 	}
