@@ -1,3 +1,4 @@
+package example;
 import shell.Command;
 import shell.CommandHandler;
 import shell.Shell;
