@@ -15,6 +15,10 @@ public abstract class Parameter {
 	 */
 	private final String description;
 	
+	/**
+	 * Getter für den Typen
+	 * @return Art des gespeicherten Parametertypen
+	 */
 	public abstract String getType();
 	
 	/**

@@ -1,12 +1,29 @@
 package shell;
 
+/**
+ * Klasse zum Speichern von Symbolparametern
+ * @author stephan
+ *
+ */
 public class StringParameter extends Parameter{
+	/**
+	 * Wert des Parameters
+	 */
+	private String value;
+	
+	/**
+	 * Konstruktor zum erzeugen eines leeren SymbolParameters.
+	 * 
+	 * @param name
+	 *            Der Name des Parameters.
+	 * @param description Hilfetext des Parameters
 
+	 */
 	public StringParameter(String name, String description) {
 		super(name, description);
 	}
 
-	private String value;
+	
 	
 	@Override
 	public void setValue(String value) {

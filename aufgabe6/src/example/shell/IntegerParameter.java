@@ -15,6 +15,7 @@ public class IntegerParameter extends Parameter {
 	/**
 	 * Konstruktor zum erzeugen eines leeren IntegerParameters.
 	 * @param name Der Name des Parameters.
+	 * @param description Hilfetext zum Parameter
 	 */
 	public IntegerParameter(String name, String description) {
 		super(name, description);
