@@ -2,12 +2,18 @@ package shell;
 
 import java.util.ArrayList;
 
+/**
+ * Klasse zur Speicherung von Symbolparametern
+ * @author stephan
+ *
+ */
 public class SymbolParameter extends Parameter {
 	/**
 	 * Konstruktor zum erzeugen eines leeren SymbolParameters.
 	 * 
 	 * @param name
 	 *            Der Name des Parameters.
+	 * @param description Hilfetext des Parameters
 	 * @param validSymbols
 	 *            Eine <code>ArrayList</code> von Strings der erlaubten Symbole
 	 */
@@ -19,6 +25,16 @@ public class SymbolParameter extends Parameter {
 		this.validSymbols = validSymbols;
 	}
 	
+	/**
+	 * Konstruktor zum erzeugen eines leeren SymbolParameters.
+	 * 
+	 * @param name
+	 *            Der Name des Parameters.
+	 * @param description
+	 *            Hilfetext des Parameters
+	 * @param validSymbols
+	 *            Eine durch Kommata getrennte Liste Strings der erlaubten Symbole
+	 */
 	public SymbolParameter(String name, String description,
 			String... validSymbols)
 	{
