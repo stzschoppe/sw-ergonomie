@@ -3,7 +3,7 @@ package shell;
 import java.util.ArrayList;
 
 /**
- * Klasse zur Speicherung von Symbolparametern
+ * Klasse zur Speicherung von Symbolparametern. Ein Symbolparameter kann mehrere gültige Werte annehmen. 
  * @author stephan
  *
  */
