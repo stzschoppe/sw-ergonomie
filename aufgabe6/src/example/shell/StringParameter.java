@@ -1,7 +1,7 @@
 package shell;
 
 /**
- * Klasse zum Speichern von Symbolparametern
+ * Klasse zum Speichern von Stringparametern. Ein String-Paramteter kann genau einen Wert annehmen.  
  * @author stephan
  *
  */
@@ -12,10 +12,9 @@ public class StringParameter extends Parameter{
 	private String value;
 	
 	/**
-	 * Konstruktor zum erzeugen eines leeren SymbolParameters.
+	 * Konstruktor zum erzeugen eines leeren Stringparametern.
 	 * 
-	 * @param name
-	 *            Der Name des Parameters.
+	 * @param name Der Name des Parameters.
 	 * @param description Hilfetext des Parameters
 
 	 */

@@ -5,16 +5,14 @@ import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
 /**
- * This class represents a command shell and is the interface for any user. 
- * The class has a ArrayList of all possible contexts. A Context is a 
- * @author Pascal Staudenrauß
+ * Diese Klasse definiert eine Shell und dient als Interface für den Benutzer. Die Shell ist nach dem Singleton-Muster realisiert.
  *
  */
 public class Shell {
 	private Context activeContext;
 	private Context defaultContext;
 	/**
-	 * @return the defaultContext
+	 * @return Gibt den Standardkontext aus, in dem sich die Shell befindet. 
 	 */
 	Context getDefaultContext() {
 		return defaultContext;
@@ -45,6 +43,9 @@ public class Shell {
 		addCommand(new shell.tools.ShowAllCommandsWithHelpCommand("??", "Zeigt eine Liste aller möglichen Befehle mit Hilfe an."));
 	}
 	
+	/**
+	 * Diese Methode startet die Shell so dass Befehle eingegeben werden können. Der Aufruf weiterer Methoden ist dazu nicht notwendig. Die Shell wird über die Methode halt() gestoppt.
+	 */
 	public void run(){
 		run = true;
 		while (run) {
@@ -65,6 +66,9 @@ public class Shell {
 		}
 	}
 	
+	/**
+	 * Stoppt die Shell.
+	 */
 	public void halt() {
 		run=false;
 	}
@@ -94,6 +98,10 @@ public class Shell {
 		getDefaultContext().setDescription(description);
 	}
 	
+	/**
+	 * Liest die Kommando-Zeile und erzeugt daraus Tokens, die interpretiert werden.
+	 * @return der eingegebene Befehl 
+	 */
 	private Command readCommand() {
 	    String inputLine = "";
         String commandString = "?";

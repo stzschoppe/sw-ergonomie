@@ -6,7 +6,7 @@ import java.util.Collections;
 
 /**
  * Die Klasse Command stellt einen einzelnen Befehl dar. Sie enthält den Namen
- * des Befehls, mit dem er auf der Kommandozeile aufgerufen wird, seine Beschreibung für die Hilfe und eine Liste der erwarteten Parameter.
+ * des Befehls, mit dem er auf der Kommandozeile aufgerufen wird, seine Beschreibung für die Hilfe und eine Liste der möglichen Parameter für diesen Befehl.
  * 
  * @author thom
  *

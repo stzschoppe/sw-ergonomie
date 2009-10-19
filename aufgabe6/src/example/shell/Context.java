@@ -5,6 +5,13 @@ import java.util.Collection;
 import java.util.Collections;
 import java.util.HashSet;
 
+/**
+ * Diese Klasse stellt einen Kontext dar, in dem sich der Benutzer bzw. die Shell befindet. Der Kontext enthält unter anderem eine Liste aller Befehle (Commands),
+ * die in diesem Kontext ausgeführt werden können.
+ * @author pascal
+ *
+ */
+
 public class Context {
 	private ArrayList<Command> commands;
 	private final String name;
@@ -18,6 +25,10 @@ public class Context {
 		this.commands = new ArrayList<Command>(); 
 	}
 	
+	/**
+	 * Fügt einen in diesem Kontext gültigen Befehl hinzu.
+	 * @param command
+	 */
 	public void addCommand(Command command) {
 		commands.add(command);
 	}
@@ -46,6 +57,10 @@ public class Context {
 		return description;
 	}
 	
+	/**
+	 * Zeigt die Hilfe zum entsprechenden Befehl an.
+	 * @param commandString Der Name des Befehls, dessen Hilfe aufgerufen werden soll.
+	 */
 	public void showCommandWithHelp(String commandString) {
 		for (Command command:commands) {
 			if (command.getName().equals(commandString)) {
@@ -55,6 +70,9 @@ public class Context {
 		
 	}
 	
+	/**
+	 * Zeigt alle gültigen Befehle dieses Kontextes an.
+	 */
 	public void showAllCommands(){
 		Shell.getInstance().outln(getDescription());
 		Shell.getInstance().outln("Sie können die folgenden Befehle eingeben:");
@@ -68,6 +86,9 @@ public class Context {
 	    Shell.getInstance().outln("Geben Sie \"??\" ein um eine Liste der Befehle mit zugehöriger Hilfe anzuzeigen.");
 	}
 	
+	/**
+	 * Zeigt alle in diesem Kontext gültigen Befehle und deren Beschreibung an.
+	 */
 	public void showAllCommandsWithHelp(){
 		Shell.getInstance().outln(getDescription());
 		Shell.getInstance().outln("Sie können die folgenden Befehle eingeben:");		
@@ -76,6 +97,11 @@ public class Context {
 	    }
 	}
 	
+	/**
+	 * Gibt aus ob es in diesem Kontext einen Befehl gibt, der den übergebenen Präfix besitzt.
+	 * @param prefix Der übergebene Präfix.
+	 * @return
+	 */
 	public boolean hasCommandsStartingWith(String prefix){
 		boolean found=false;
 	    for (Command command:commands) {
@@ -86,6 +112,10 @@ public class Context {
 	    return found;
 	}	
 	
+	/**
+	 * Gibt alle Befehle aus, die den angegebenen Präfix haben.
+	 * @param prefix Der übergebene Präfix.
+	 */
 	public void showAllCommandsStartingWith(String prefix){
 		HashSet<String> commandsSet = new HashSet<String>();
 	    for (Command command:commands) {
