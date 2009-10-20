@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 /**
  * Klasse zur Speicherung von Symbolparametern. Ein Symbolparameter kann mehrere gültige Werte annehmen. 
- * @author stephan
+ * @author Stephan Tzschoppe
  *
  */
 public class SymbolParameter extends Parameter {

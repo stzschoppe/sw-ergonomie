@@ -2,7 +2,7 @@ package shell;
 
 /**
  * Abstrakte Klasse zur Speicherung von Parametern.
- * @author stephan
+ * @author Stephan Tzschoppe
  *
  */
 public abstract class Parameter {
