@@ -5,8 +5,18 @@ import shell.CommandHandler;
 import shell.Shell;
 import shell.StringParameter;
 
+/** Vorlage für einen Befehl der die Hilfe zu einem einzelnen Befehl anzeigt.
+ * 
+ * @author Thomas Bühring
+ *
+ */
 public class ShowCommandHelpCommand extends Command {
 
+	/** Erstellt den Befehl mit Handler.
+	 * 
+	 * @param name        Name des Befehls, wie er in der Shell erscheinen soll.
+	 * @param description Beschreibung des Befehls für die Hilfe.
+	 */
 	public ShowCommandHelpCommand(String name, String description) {
 		super(name, description, new CommandHandler() {
 
