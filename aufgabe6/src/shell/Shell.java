@@ -68,7 +68,8 @@ public class Shell {
 				// liest Befehl ein
 				Command command = readCommand();
 				// führt zugehörigen Handler aus
-				command.executeHandler();
+				if (command!=null)
+					command.executeHandler();
 			} catch (IllegalArgumentException exception) {
 				outln(exception.getMessage());
 		    } catch (UnsupportedOperationException exception) {
@@ -79,7 +80,10 @@ public class Shell {
 		    	} else {
 		    		outln("Geben Sie \"?\" ein, um eine Liste der möglichen Befehle anzuzeigen.");
 		    	}
-		    }
+		    } catch (NullPointerException npe) {
+		    	outln("Shell vorzeitig beendet.");
+       	        return;
+            }		    
 		}
 	}
 	
@@ -156,7 +160,7 @@ public class Shell {
         catch(java.io.IOException exc) {
             System.out.println ("Fehler beim Lesen: "+ exc.getMessage());
         }
-
+        
         StringTokenizer tokenizer = new StringTokenizer(inputLine);
 
         if(tokenizer.hasMoreTokens())

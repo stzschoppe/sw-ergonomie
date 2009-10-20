@@ -45,6 +45,11 @@ public class Context {
 	 * @param command
 	 */
 	public void addCommand(Command command) {
+		for (Command curCommand : commands) {
+			if (curCommand.getName().equals(command.getName()) && curCommand.getParameters().size()==command.getParameters().size()) {
+				throw new IllegalArgumentException("Ein Befehl mit dem gleichen Namen und der gleichen Zahl an Paramtern wurde hinzugefügt.");
+			}
+		}
 		commands.add(command);
 	}
 	
