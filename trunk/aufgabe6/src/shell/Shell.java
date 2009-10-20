@@ -9,25 +9,36 @@ import java.util.StringTokenizer;
  *
  */
 public class Shell {
+	/** Der aktive Kontext.
+	 */
 	private Context activeContext;
+	/** Der Standard-Kontext (der beim Starten der Shell aktiv ist).
+	 */
 	private Context defaultContext;
+	/** Die Instanzvariable des Singleton-Musters.
+	 */
+	private static Shell instance;	
+	/** Status der Shell (laufend oder zum Beenden vorgemerkt).
+	 */
+	private boolean run;
+	
 	/**
-	 * @return Gibt den Standardkontext aus, in dem sich die Shell befindet. 
+	 * @return Gibt den Standardkontext zurück, in dem sich die Shell befindet. 
 	 */
 	Context getDefaultContext() {
 		return defaultContext;
 	}
 
-	/**
-	 * @param defaultContext the defaultContext to set
+	/** Setzt den Standard-Kontext.
+	 * @param defaultContext Zu setzender Standard-Kontext.
 	 */
 	void setDefaultContext(Context defaultContext) {
 		this.defaultContext = defaultContext;
 	}
-
-	private boolean run;
-	private static Shell instance;
 	
+	/**
+	 * @return Die Instanz der Shell (Singleton-Muster).
+	 */
 	public static Shell getInstance() {
 		if (instance==null) {
 			instance = new Shell();
@@ -35,6 +46,9 @@ public class Shell {
 		return instance;
 	}
 	
+	/** Erzeugt eine neue Shell. Dabei werden einige Befehle automatisch hinzugefügt.
+	 *  @see shell.tools
+	 */
 	private Shell(){
 		this.defaultContext = new Context("default", "",  ">");
 		setActiveContext(defaultContext);
@@ -44,13 +58,16 @@ public class Shell {
 	}
 	
 	/**
-	 * Diese Methode startet die Shell so dass Befehle eingegeben werden können. Der Aufruf weiterer Methoden ist dazu nicht notwendig. Die Shell wird über die Methode halt() gestoppt.
+	 * Diese Methode startet die Shell so dass Befehle eingegeben werden können.
+	 * Der Aufruf weiterer Methoden ist dazu nicht notwendig. Die Shell wird über die Methode halt() gestoppt.
 	 */
 	public void run(){
 		run = true;
 		while (run) {
 			try {
+				// liest Befehl ein
 				Command command = readCommand();
+				// führt zugehörigen Handler aus
 				command.executeHandler();
 			} catch (IllegalArgumentException exception) {
 				outln(exception.getMessage());
@@ -73,27 +90,48 @@ public class Shell {
 		run=false;
 	}
 	
+	/** Fügt einen Befehl zum Standard-Kontext hinzu.
+	 * 
+	 * @param command Der hinzuzufügende Befehl.
+	 */
 	public void addCommand(Command command){
 		
 		defaultContext.addCommand(command);
 	}
 	
+	/** Gibt einen Text auf der Shell aus.
+	 * 
+	 * @param out Der auszugebende Text.
+	 */
 	public void out(String out){
 		System.out.print(out);
 	}	
 	
+	/** Gibt einen Text auf der Shell aus und fügt einen Zeilenumbruch an.
+	 * 
+	 * @param out Der auszugebende Text.
+	 */
 	public void outln(String out){
 		System.out.println(out);
 	}
 
+	/**
+	 * @return Der aktive Kontext der Shell.
+	 */
 	public Context getActiveContext() {
 		return activeContext;
 	}
-
+	
+    /** Setzt den aktiven Kontext der Shell.
+     * @param activeContext Der zu setzende Kontext.
+     */
 	public void setActiveContext(Context activeContext) {
 		this.activeContext = activeContext;
 	}
-	
+
+    /** Setzt die Beschreibung des Standard-Kontext der Shell.
+     * @param description Die zu setzende Beschreibung.
+     */
 	public void setDescription(String description) {
 		getDefaultContext().setDescription(description);
 	}
@@ -107,8 +145,10 @@ public class Shell {
         String commandString = "?";
         Command calledCommand = null;
         
+        // Gibt die Eingabeabfrage der Shell aus.
         System.out.print(getActiveContext().getPrompt()); 
 
+        // Erzeugt aus der Benutzereingabe einen Tokenizer (Wort-für-Wort-Leser)
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         try {
             inputLine = reader.readLine();
@@ -126,8 +166,11 @@ public class Shell {
         
         int givenParameterCount = tokenizer.countTokens();
         
+        // Findet den passenden Befehl zur Benutzereingabe
         for (Command command : getActiveContext().getCommands()) {
         	if (command.getName().equals(commandString)) {
+        		// hier werden überladene Befehle unterstützt: wenn die Zahl der Paramter /besser/ passt,
+        		// wird der gefundene Befehl übernommen
         		if (calledCommand==null || command.getParameters().size()==givenParameterCount) {
         		    calledCommand = (Command) command.clone();
         		}
@@ -138,6 +181,7 @@ public class Shell {
         	throw new UnsupportedOperationException(commandString);
         }
         
+        // Setzt im gefunden Befehl Werte für die eingegebenen Parameter, wenn vorhanden
         for (int x=0; x<calledCommand.getParameters().size(); x++) {
         	Parameter currentParameter=calledCommand.getParameters().get(x);
         	if(tokenizer.hasMoreTokens()) {

@@ -1,8 +1,6 @@
 package shell;
 
 import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
 
 /**
  * Die Klasse Command stellt einen einzelnen Befehl dar. Sie enthält den Namen
@@ -10,7 +8,7 @@ import java.util.Collections;
  * 
  * Command implementiert Comparable damit die Liste der Befehle in einem Context alphabetisch sortiert werden kann.
  * 
- * @author thom
+ * @author Thomas Bühring
  *
  */
 public class Command implements Comparable<Command> {
@@ -46,7 +44,7 @@ public class Command implements Comparable<Command> {
 	}
 	
 	/** Vergleicht zwei Command anhand ihrer Namen.
-	 * @see String.compareTo()
+	 * @param o2 Befehl gegen den verglichen wird.
 	 */
 	@Override
 	public int compareTo(Command o2) {
@@ -96,6 +94,11 @@ public class Command implements Comparable<Command> {
 		return parameters;
 	}
 	
+	/** Gibt den Parameter zu einem Namen zurück.
+	 * 
+	 * @param name Der Name des Parameters.
+	 * @return Der Parameter mit dem angegebenen Namen.
+	 */
 	public Parameter getParameterByName(String name) {
 		for (int x=0; x<getParameters().size(); x++) {
 			Parameter currentParameter = getParameters().get(x);
