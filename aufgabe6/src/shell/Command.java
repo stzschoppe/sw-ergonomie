@@ -8,10 +8,12 @@ import java.util.Collections;
  * Die Klasse Command stellt einen einzelnen Befehl dar. Sie enthält den Namen
  * des Befehls, mit dem er auf der Kommandozeile aufgerufen wird, seine Beschreibung für die Hilfe und eine Liste der möglichen Parameter für diesen Befehl.
  * 
+ * Command implementiert Comparable damit die Liste der Befehle in einem Context alphabetisch sortiert werden kann.
+ * 
  * @author thom
  *
  */
-public class Command {
+public class Command implements Comparable<Command> {
 	/**
 	 * Der Name mit dem der Befehl in der Shell aufgerufen wird.
 	 */
@@ -42,6 +44,14 @@ public class Command {
 		this.handler = handler;
 		this.parameters = new ArrayList<Parameter>();
 	}
+	
+	/** Vergleicht zwei Command anhand ihrer Namen.
+	 * @see String.compareTo()
+	 */
+	@Override
+	public int compareTo(Command o2) {
+		return getName().compareTo(o2.getName());
+	}	
 	
 	/**
 	 * @return Gibt die Beschreibung des Befehls für die Hilfe zurück.
