@@ -2,7 +2,7 @@ package shell;
 
 /**
  * Klasse zur Speicherung von Integer-Parametern.
- * @author stephan
+ * @author Stephan Tzschoppe
  *
  */
 public class IntegerParameter extends Parameter {

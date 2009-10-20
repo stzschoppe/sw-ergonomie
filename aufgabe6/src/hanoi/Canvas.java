@@ -10,10 +10,10 @@ import java.util.*;
  * This is a modification of the general purpose Canvas, specially made for
  * the BlueJ "shapes" example. 
  *
- * @author: Bruce Quig
- * @author: Michael Kolling (mik)
+ * @author Bruce Quig
+ * @author Michael Kolling (mik)
  *
- * @version: 1.6 (shapes)
+ * @version 1.6 (shapes)
  */
 public class Canvas
 {
@@ -52,7 +52,7 @@ public class Canvas
      * @param title  title to appear in Canvas Frame
      * @param width  the desired width for the canvas
      * @param height  the desired height for the canvas
-     * @param bgClour  the desired background colour of the canvas
+     * @param bgColour  the desired background colour of the canvas
      */
     private Canvas(String title, int width, int height, Color bgColour)
     {
@@ -119,7 +119,7 @@ public class Canvas
 
     /**
      * Set the foreground colour of the Canvas.
-     * @param  newColour   the new colour for the foreground of the Canvas 
+     * @param  colorString   the new colour for the foreground of the Canvas 
      */
     public void setForegroundColor(String colorString)
     {

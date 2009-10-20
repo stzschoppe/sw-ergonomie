@@ -5,8 +5,9 @@ import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
 /**
- * Diese Klasse definiert eine Shell und dient als Interface für den Benutzer. Die Shell ist nach dem Singleton-Muster realisiert.
- *
+ * Diese Klasse definiert eine Shell und dient als Interface für den Benutzer.
+ * Die Shell ist nach dem Singleton-Muster realisiert.
+ * @author Sören Gärtner
  */
 public class Shell {
 	/** Der aktive Kontext.

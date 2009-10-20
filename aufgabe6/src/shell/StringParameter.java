@@ -2,7 +2,7 @@ package shell;
 
 /**
  * Klasse zum Speichern von Stringparametern. Ein String-Paramteter kann genau einen Wert annehmen.  
- * @author stephan
+ * @author Stephan Tzschoppe
  *
  */
 public class StringParameter extends Parameter{
