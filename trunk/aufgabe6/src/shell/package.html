@@ -1,0 +1,93 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<!--
+
+  @(#)package.html	1.60 98/01/27
+
+  Copyright 1998 Sun Microsystems, Inc. 901 San Antonio Road, 
+  Palo Alto, California, 94303, U.S.A.  All Rights Reserved.
+
+  This software is the confidential and proprietary information of Sun
+  Microsystems, Inc. ("Confidential Information").  You shall not
+  disclose such Confidential Information and shall use it only in
+  accordance with the terms of the license agreement you entered into
+  with Sun.
+
+  CopyrightVersion 1.2
+
+-->
+</head>
+<body bgcolor="white">
+Dieses Package bietet ein Grundgerüst für einen Kommandozeilen-Interpreter, welcher auf Grund des generischen Designs
+leicht in entsprechende Anwendungen eingebunden werden kann. <br>
+
+<h3> Inhalt </h3>
+<li> Einleitung </li>
+<li> Klassendiagramm </li>
+<li> Einbindung der Shell </li> 
+
+<h3> Einleitung </h3>
+ 
+Die Shell befindet sich zu jedem Zeitpunkt in einem bestimmten Kontext. 
+In jedem Kontext können bestimmte Befehle (Commands) ausgeführt werden. Standardmäßig kennt die Shell folgende Befehle:
+
+<ui>
+<li> ? Zeigt eine Liste aller möglichen Befehle an. </li>
+<li> ? <befehl> Zeigt die Semantik und Syntax des Befehls an. </li>
+<li> ?? Zeigt eine Liste aller möglichen Befehlen mit Semantik und Syntax an. </li>
+</ui>
+<br>
+Jedes Command kann mit bestimmten Parametern versehen werden. 
+Nachfolgendes Klassendiagramm verdeutlicht den dargestellten Sachverhalt. 
+
+<h3> Klassendiagramm </h3>
+<img src="./klassendiagramm.png">
+
+<h3> Einbindung der Shell </h3>
+
+<h4>Entfernung eventuell vorhandener Parser, sowie daran beteiligter Klassen(Commands, CommandsWords, usw):
+</h4>
+<ul>
+  <li>Sicherung der Befehle sowie deren assoziierte Methoden zu Befehlsausführung</li>
+  <li>Entfernung des Parsers aus dem Programm, sowie dessen zugehörige Methoden, beispielsweise: processCommand, readCommand, usw</li>
+  <li>Ersetzung der zentralen Prozessschleife durch den Befehl:  Shell.getInstance().run();</li>
+</ul>
+
+<h4>Erzeugung der Befehlswörter und deren Anbindung mittels CommandHandler:</h4>
+<ul>
+  <li>Erstellung des Befehls ohne Parameter:</li>
+<h5>Shell.getInstance().addCommand(<font color="#7F0055">new</font> Command(<font color="#2A00FF">"Befehl"</font>, <font color="#2A00FF">"Was macht der Befehl."</font>, <font color="#7F0055">new</font> CommandHandler(){<br>
+    		
+		<blockquote>@Override<br>
+		<font color="#7F0055">public void</font> execute(Command command) {<br>
+			<blockquote>fuehreDenBefehlAus();</blockquote></blockquote>
+}}));<br>
+</h5>
+  <li>Erstellung des Befehls mit Parameter:</li>
+<h5>Command kommando = (<font color="#7F0055">new</font> Command(<font color="#2A00FF">"Befehl"</font>, <font color="#2A00FF">"Was macht der Befehl."</font>, <font color="#7F0055">new</font> CommandHandler(){
+    		
+		<blockquote>@Override
+		<font color="#7F0055">public void</font> execute(Command command) {
+				<blockquote>fuehreDenBefehlAus(command.getParameterByName(<font color="#2A00FF">"BeispielZahl"</font>).getValueAsInteger());	</blockquote>			
+			}}));</blockquote>
+    	<font color="#3F7F5F">//Fügt dem Kommando einen Parameter hinzu</font><br>
+kommando.addParameter(<font color="#7F0055">new</font> IntegerParameter(<font color="#2A00FF">"BeispielZahl"</font>, <font color="#2A00FF">"Zahl als Beispielparameter."</font>));<br>	
+    	Shell.getInstance().addCommand(kommando);
+</h5><li>Analoge Ausführung für alle weiteren Befehle</li>
+</ul>
+<h4>Weitere Anpassungen:</h4>
+<ul>
+<li>Sämtliche Ausgaben auf der System-Konsole werden an die shell delegiert
+</li>
+<h5>Shell.getInstance().outln(<font color="#2A00FF">"Beispiel-String"</font>);</h5>
+
+<li>Abfangen und Verarbeiten von exceptions für falsche Eingaben wird entfernt, dies übernimmt die shell</li>
+</ul>
+</body>
+</ul>
+
+<!-- Put @see and @since tags down here. -->
+
+</body>
+</html>
