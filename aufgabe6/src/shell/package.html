@@ -22,29 +22,29 @@
 Dieses Package bietet ein Grundgerüst für einen Kommandozeilen-Interpreter, welcher auf Grund des generischen Designs
 leicht in entsprechende Anwendungen eingebunden werden kann. <br>
 
-<h3> Inhalt </h3>
-<li> Einleitung </li>
-<li> Klassendiagramm </li>
-<li> Einbindung der Shell </li> 
+<h3 id="inhalt"> Inhalt </h3>
+<li><a href="#einleitung"> Einleitung </a></li>
+<li><a href="#klassendiagramm"> Klassendiagramm </a></li>
+<li><a href="#einbindung"> Einbindung der Shell </a></li> 
 
-<h3> Einleitung </h3>
+<h3 id="einleitung"> Einleitung </h3>
  
-Die Shell befindet sich zu jedem Zeitpunkt in einem bestimmten Kontext. 
-In jedem Kontext können bestimmte Befehle (Commands) ausgeführt werden. Standardmäßig kennt die Shell folgende Befehle:
+<p>Die Shell befindet sich zu jedem Zeitpunkt in einem bestimmten Kontext. 
+In jedem Kontext können bestimmte Befehle (Commands) ausgeführt werden. Standardmäßig kennt die Shell folgende Befehle:</p>
 
-<ui>
-<li> ? Zeigt eine Liste aller möglichen Befehle an. </li>
-<li> ? <befehl> Zeigt die Semantik und Syntax des Befehls an. </li>
-<li> ?? Zeigt eine Liste aller möglichen Befehlen mit Semantik und Syntax an. </li>
-</ui>
-<br>
-Jedes Command kann mit bestimmten Parametern versehen werden. 
-Nachfolgendes Klassendiagramm verdeutlicht den dargestellten Sachverhalt. 
+<ul>
+<li> <i>?</i> Zeigt eine Liste aller möglichen Befehle an. </li>
+<li> <i>? &lt;befehl&gt;</i> Zeigt die Semantik und Syntax des Befehls an. </li>
+<li> <i>??</i> Zeigt eine Liste aller möglichen Befehlen mit Semantik und Syntax an. </li>
+</ul>
 
-<h3> Klassendiagramm </h3>
-<img src="./klassendiagramm.png">
+<p>Jedes Command kann mit bestimmten Parametern versehen werden. 
+Nachfolgendes Klassendiagramm verdeutlicht den dargestellten Sachverhalt.</p> 
 
-<h3> Einbindung der Shell </h3>
+<h3 id="klassendiagramm"> Klassendiagramm</h3>
+<p><a href="./klassendiagramm.png" target="_blank"><img width="600" src="./klassendiagramm.png" alt="Klassendiagramm" /></a></p>
+
+<h3 id="einbindung"> Einbindung der Shell </h3>
 
 <h4>Entfernung eventuell vorhandener Parser, sowie daran beteiligter Klassen(Commands, CommandsWords, usw):
 </h4>
@@ -56,31 +56,39 @@ Nachfolgendes Klassendiagramm verdeutlicht den dargestellten Sachverhalt.
 
 <h4>Erzeugung der Befehlswörter und deren Anbindung mittels CommandHandler:</h4>
 <ul>
-  <li>Erstellung des Befehls ohne Parameter:</li>
-<h5>Shell.getInstance().addCommand(<font color="#7F0055">new</font> Command(<font color="#2A00FF">"Befehl"</font>, <font color="#2A00FF">"Was macht der Befehl."</font>, <font color="#7F0055">new</font> CommandHandler(){<br>
-    		
-		<blockquote>@Override<br>
-		<font color="#7F0055">public void</font> execute(Command command) {<br>
-			<blockquote>fuehreDenBefehlAus();</blockquote></blockquote>
-}}));<br>
-</h5>
-  <li>Erstellung des Befehls mit Parameter:</li>
-<h5>Command kommando = (<font color="#7F0055">new</font> Command(<font color="#2A00FF">"Befehl"</font>, <font color="#2A00FF">"Was macht der Befehl."</font>, <font color="#7F0055">new</font> CommandHandler(){
-    		
-		<blockquote>@Override
-		<font color="#7F0055">public void</font> execute(Command command) {
-				<blockquote>fuehreDenBefehlAus(command.getParameterByName(<font color="#2A00FF">"BeispielZahl"</font>).getValueAsInteger());	</blockquote>			
-			}}));</blockquote>
-    	<font color="#3F7F5F">//Fügt dem Kommando einen Parameter hinzu</font><br>
-kommando.addParameter(<font color="#7F0055">new</font> IntegerParameter(<font color="#2A00FF">"BeispielZahl"</font>, <font color="#2A00FF">"Zahl als Beispielparameter."</font>));<br>	
-    	Shell.getInstance().addCommand(kommando);
-</h5><li>Analoge Ausführung für alle weiteren Befehle</li>
+  <li>Erstellung eines Befehls ohne Parameter:
+<pre>
+Shell.getInstance().addCommand(new Command("Befehl", "Was macht der Befehl.", new CommandHandler(){
+
+    &#64;Override
+    public void execute(Command command) {
+
+        fuehreDenBefehlAus();
+
+}}));
+</pre></li>
+  <li>Erstellung eines Befehls mit Parameter(n):
+  <pre>
+Command kommando = (new Command("Befehl", "Was macht der Befehl.", new CommandHandler(){
+
+    &#64;Override
+    public void execute(Command command) {
+
+        fuehreDenBefehlAus(command.getParameterByName("BeispielZahl").getValueAsInteger()); 
+
+    }}));
+
+//Fügt dem Kommando einen Parameter hinzu
+kommando.addParameter(new IntegerParameter("BeispielZahl", "Zahl als Beispielparameter."));
+Shell.getInstance().addCommand(kommando); 
+</pre></li>
+<li>Für alle weiteren Befehle analog implementieren.</li>
 </ul>
 <h4>Weitere Anpassungen:</h4>
 <ul>
 <li>Sämtliche Ausgaben auf der System-Konsole werden an die shell delegiert
+<pre>Shell.getInstance().outln("Beispiel-String");</pre>
 </li>
-<h5>Shell.getInstance().outln(<font color="#2A00FF">"Beispiel-String"</font>);</h5>
 
 <li>Abfangen und Verarbeiten von exceptions für falsche Eingaben wird entfernt, dies übernimmt die shell</li>
 </ul>
@@ -88,6 +96,8 @@ kommando.addParameter(<font color="#7F0055">new</font> IntegerParameter(<font co
 </ul>
 
 <!-- Put @see and @since tags down here. -->
+
+@see Shell
 
 </body>
 </html>

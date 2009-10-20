@@ -3,7 +3,6 @@ package shell;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
-import java.util.Comparator;
 import java.util.HashSet;
 
 /**
@@ -15,11 +14,25 @@ import java.util.HashSet;
  */
 
 public class Context {
+	/** Die Liste der Befehle.
+	 */
 	private ArrayList<Command> commands;
+	/** Der Name des Kontexts.
+	 */
 	private final String name;
+	/** Die Beschreibung des Kontexts für die Hilfe.
+	 */
 	private String description;
+	/** Die Eingabeabfrage die in diesem Kontext angezeigt werden soll.
+	 */
 	private String prompt;
 	
+	/** Erzeugt einen neuen Kontext.
+	 * 
+	 * @param name         Der Name des Kontexts.
+	 * @param description  Die Beschreibung des Kontexts für die Hilfe.
+	 * @param prompt       Die Eingabeabfrage die in diesem Kontext angezeigt werden soll.
+	 */
 	public Context(String name, String description, String prompt){
 		this.name = name;
 		this.description = description;
@@ -96,6 +109,8 @@ public class Context {
 	/** Erzeugt eine Liste, in der überladene Befehle nur einmal vorkommen.
 	 * 
 	 * @return Die unter dem Befehlsnamen vereinigte und sortierte Liste der Befehlsnamen.
+	 * @see #showAllCommands()
+	 * @see #showAllCommandsStartingWith(String)
 	 */
 	protected ArrayList<String> getUnifiedCommandNames() {
 		HashSet<String> commandsSet = new HashSet<String>();
