@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<page>
+  <description>
+This page is a start page.
+</description>
+  <content>
+This is an example content.
+</content>
+  <title>Another</title>
+  <topics>
+    <entry name="test-another.xml" title="Another"/>
+    <entry name="test-bnother.xml" title="B another"/>
+  </topics>
+  <navigation>
+    <entry name="test-another.xml" title="Another">
+      <entry name="test-another-sub.xml" title="Another Sub-Entry"/>
+    </entry>
+  </navigation>
+</page>
