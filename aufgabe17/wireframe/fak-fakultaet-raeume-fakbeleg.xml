@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<page>
+  <description>
+Hier kann durch die Trimester navigiert werden um sich über die dann aktuelle Raumbelegung zu informieren.
+</description>
+  <content>
+Raumbelegung wird für das aktuelle und kommende Trimester in Form von Tabellen dargestellt.
+</content>
+</page>
