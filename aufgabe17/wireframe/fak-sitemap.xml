@@ -64,7 +64,7 @@
 				<entry name="fak-studium-studwinf-ba-wahlpflicht.xml" title="Wahlpflicht Wirt. Informatik Bachelor" />
 				<entry name="fak-studium-studwinf-ba-arbeit.xml" title="Bachelor Arbeit Wirt. Informatik" />
 			</entry>
-			<entry name="fak-studium-studwinf-ba.xml" title="Studium Wirt. Informatik Bachelor">
+			<entry name="fak-studium-studwinf-ma.xml" title="Studium Wirt. Informatik Master">
 				<entry name="fak-studium-studwinf-ma-aenderung.xml" title="Änderungen am Modulhandbuch Wirt. Informatik Master" />
 				<entry name="fak-studium-studwinf-ma-studplan.xml" title="Studienplan Wirt. Informatik Master" />
 				<entry name="fak-studium-studwinf-ma-seminare.xml" title="Seminare Wirt. Informatik Master" />
