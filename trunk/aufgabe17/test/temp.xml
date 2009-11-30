@@ -1,0 +1,61 @@
+<entry name="fak-forschung.xml" title="Forschung">
+<entry name="fak-forschung-berichte.xml" title="Technische Berichte" />
+<entry name="fak-forschung-wissen.xml" title="Wissen und Technologie" />
+<entry name="fak-forschung-infosys.xml" title="Informationssystem Forschung" />
+</entry>
+<entry name="fak-veranstaltungen.xml" title="Lehrveranstaltungen">
+	<entry name="fak-veranstaltungen-weitere0910.xml" title="Veranstaltungen 09/10">
+		<entry name="fak-veranstaltungen-weitere0910-inf.xml" title="Veranstaltungen 09/10 Informatik">
+			<entry name="fak-veranstaltungen-weitere0910-inf-bc.xml" title="Veranstaltungen Informatik Bachelor 09/10" />
+			<entry name="fak-veranstaltungen-weitere0910-inf-ma.xml" title="Veranstaltungen Informatik Master 09/10" />
+		</entry>
+		
+		<entry name="fak-veranstaltungen-weitere0910-winf.xml" title="Veranstaltungen 09/10 Wirt. Informatik">
+			<entry name="fak-veranstaltungen-weitere0910-winf-bc.xml" title="Veranstaltungen Wirt. Informatik Bachelor 09/10" />
+			<entry name="fak-veranstaltungen-weitere0910-winf-ma.xml" title="Veranstaltungen Wirt. Informatik Master 09/10" />
+		</entry>
+	</entry>
+	
+	<entry name="fak-veranstaltungen-weitere1011.xml" title="Veranstaltungen 10/11">
+		<entry name="fak-veranstaltungen-weitere1011-inf.xml" title="Veranstaltungen 10/11 Informatik">
+			<entry name="fak-veranstaltungen-weitere1011-inf-bc.xml" title="Veranstaltungen Informatik Bachelor 10/11" />
+			<entry name="fak-veranstaltungen-weitere1011-inf-ma.xml" title="Veranstaltungen Informatik Master 10/11" />
+		</entry>
+		
+		<entry name="fak-veranstaltungen-weitere1011-winf.xml" title="Veranstaltungen 10/11 Wirt. Informatik">
+			<entry name="fak-veranstaltungen-weitere1011-winf-bc.xml" title="Veranstaltungen Wirt. Informatik Bachelor 10/11" />
+			<entry name="fak-veranstaltungen-weitere1011-winf-ma.xml" title="Veranstaltungen Wirt. Informatik Master 10/11" />
+		</entry>
+	</entry>
+</entry> 
+
+
+
+<!-- --------------------------------- -->
+
+
+<entry name="fak-studium-studwinf.xml" title="Studium Wirt. Informatik">
+	<entry name="fak-studium-studwinf-ba.xml" title="Studium Wirt. Informatik Bachelor">
+		<entry name="fak-studium-studwinf-ba-aenderung.xml" title=" Änderungen am Modulhandbuch Wirt. Informatik Bachelor" />
+		<entry name="fak-studium-studwinf-ba-fortschritt.xml" title="Fortschrittschema (intensiv) Wirt. Informatik Bachelor" />
+		<entry name="fak-studium-studwinf-ba-studplan07.xml" title="Studienplan ab 07/08 Wirt. Informatik Bachelor " />
+		<entry name="fak-studium-studwinf-ba-studplan09.xml" title="Studienplan ab 09 Wirt. Informatik Bachelor" />
+		
+		<entry name="fak-studium-studwinf-ba-seminare.xml" title="Seminare Wirt. Informatik Bachelor" />
+		<entry name="fak-studium-studwinf-ba-projektstudium.xml" title="Projektstudium Wirt. Informatik Bachelor" />
+		<entry name="fak-studium-studwinf-ba-wahlpflicht.xml" title="Wahlpflicht Wirt. Informatik Bachelor" />
+		<entry name="fak-studium-studwinf-ba-arbeit.xml" title="Bachelor Arbeit Wirt. Informatik" />
+	</entry>
+	
+	<entry name="fak-studium-studwinf-ba.xml" title="Studium Wirt. Informatik Bachelor">
+		<entry name="fak-studium-studwinf-ma-aenderung.xml" title="Änderungen am Modulhandbuch Wirt. Informatik Master">
+		<entry name="fak-studium-studwinf-ma-studplan.xml" title="Studienplan Wirt. Informatik Master">
+		<entry name="fak-studium-studwinf-ma-seminare.xml" title="Seminare Wirt. Informatik Master">
+		<entry name="fak-studium-studwinf-ma-projekt.xml" title="Masterprojekt Wirt. Informatik">
+		<entry name="fak-studium-studwinf-ma-arbeit.xml" title="Masterarbeit Wirt. Informatik">
+	</entry>
+
+</entry>
+
+
+<entry name=".xml" title="">
