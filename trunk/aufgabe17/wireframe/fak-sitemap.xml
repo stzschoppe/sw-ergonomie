@@ -29,7 +29,7 @@
     	<entry name="fak-studium-lsf.xml" title="LSF" />
     	<entry name="fak-studium-stundenplaene.xml" title="Stundenplaene" />
     	<entry name="fak-studium-blog.xml" title="Studiendekans Blog" />
-    	<entry name="fak-studium-studinf-abamapo.xml" title="ABaMaPo"/>
+    	<entry name="fak-studium-abamapo.xml" title="ABaMaPo"/>
     	<entry name="fak-studium-studinf.xml" title="Studium Informatik">    		
     		<entry name="fak-studium-studinf-bachelor.xml" title="Studium Bachelor Studiengang Informatik">
     			<entry name="fak-studium-studinf-bachelor-modulhandbuch.xml" title="Modulhandbuch Informatik Bachelor" />
