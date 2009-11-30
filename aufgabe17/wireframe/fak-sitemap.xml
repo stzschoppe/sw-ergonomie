@@ -1,0 +1,106 @@
+<entry name="fak-start.xml" title="Fakultaet für Informatik">
+    <entry name="fak-fakultaet.xml" title="Fakultaet">
+    	<entry name="fak-fakultaet-aktuelles.xml" title="Aktuelles" />
+    	<entry name ="fak-fakultaet-bericht.xml" title="Fakultaetsbericht" />
+    	<entry name ="fak-fakultaet-vortraege.xml" title="Hochschuloeffentliche Vortraege" />
+    	<entry name ="fak-fakultaet-konferenzen.xml" title="Konferrenzen und Symposien" />
+    	<entry name ="fak-fakultaet-kolloquium.xml" title="Informatik-Kolloquium" />
+    	<entry name ="fak-fakultaet-vergveranstaltungen.xml" title="Vergangene Veranstaltungen" />
+       	<entry name ="fak-fakultaet-promhab.xml" title="Promotion und Habitilation" />
+    	<entry name ="fak-fakultaet-promverfahren.xml" title="Promotionsverfahren" />
+    	<entry name ="fak-fakultaet-evaluation.xml" title="Evaluation" />
+    	<entry name ="fak-fakultaet-fotos.xml" title="Fotos" />
+    	<entry name ="fak-fakultaet-mail.xml" title="E-mail Verteiler" />
+    	<entry name ="fak-fakultaet-persverzeichnis.xml" title="Personenverzeichnis" />
+    	<entry name ="fak-fakultaet-stellen.xml" title="Stellenausschreibungen">
+    		<entry name ="fak-fakultaet-stellen-professur.xml" title="Stellenausschreibungen Professur" />
+    		<entry name ="fak-fakultaet-stellen-mitarbeiter.xml" title="Stellenauschreibungen Mitarbeiter" />
+    	</entry>
+		<entry name ="fak-fakultaet-raeume.xml" title="Raeume">
+			<entry name ="fak-fakultaet-raeume-ecbeleg.xml" title="Electronic Classroom Belegung" />
+			<entry name ="fak-fakultaet-raeume-ecres.xml" title="Electronic Classroom Reservierung" />
+			<entry name ="fak-fakultaet-raeume-ecausstattung.xml" title="Electronic Classroom Ausstattung" />
+			<entry name ="fak-fakultaet-raeume-fakbeleg.xml" title="Fakulaetsraum Belegung" />
+			<entry name ="fak-fakultaet-raeume-fakres.xml" title="Fakulaetsraum Reservierung" />
+			<entry name ="fak-fakultaet-raeume-fakanleitung.xml" title="Fakulaetsraum Anleitung Video-System" />
+		</entry>     
+    </entry>
+    <entry name="fak-studium.xml" title="Studiengaenge">
+    	<entry name="fak-studium-lsf.xml" title="LSF" />
+    	<entry name="fak-studium-stundenplaene.xml" title="Stundenplaene" />
+    	<entry name="fak-studium-blog.xml" title="Studiendekans Blog" />
+    	<entry name="fak-studium-studinf-abamapo.xml" title="ABaMaPo"/>
+    	<entry name="fak-studium-studinf.xml" title="Studium Informatik">    		
+    		<entry name="fak-studium-studinf-bachelor.xml title="Studium Bachelor Studiengang Informatik">
+    			<entry name="fak-studium-studinf-bachelor-modulhandbuch.xml" title="Modulhandbuch Informatik Bachelor" />
+    			<entry name="fak-studium-studinf-bachelor-aenderungenModulhb.xml" title="Aenderungen Modulhandbuch Bachelor Informatik" />
+    			<entry name="fak-studium-studinf-bachelor-fpo.xml" title="FPO Informatik Bachelor"/>
+    			<entry name="fak-studium-studinf-bachelor-ergaenzungen.xml" title="Ergaenzungen Bachelor Informatik" />
+    			<entry name="fak-studium-studinf-bachelor-seminare.xml" title="Seminare Bachelor Informatik" />
+    			<entry name="fak-studium-studinf-bachelor-praktika.xml" title="Praktika Bachelor Infomatik" />
+    			<entry name="fak-studium-studinf-bachelor-wahlpflicht.xml" title="Wahlpflicht Bachelor Informatik" />
+    			<entry name="fak-studium-studinf-bachelor-arbeit.xml" title="Bachelorarbeit Informatik" />
+    		</entry>
+    		<entry name="fak-studium-studinf-master.xml title="Studium Master Studiengang Informatik">
+    			<entry name="fak-studium-studinf-master-modulhandbuch.xml" title="Modulhandbuch Informatik Master" />
+    			<entry name="fak-studium-studinf-master-aenderungenModulhb.xml" title="Aenderungen Modulhandbuch Master Informatik" />
+    			<entry name="fak-studium-studinf-master-fpo.xml" title="FPO Informatik Master"/> 
+    			<entry name="fak-studium-studinf-master-studienplan.xml" title="Studienplan Master Informatik"/>
+    			<entry name="fak-studium-studinf-master-wahlpflicht.xml" title="FAQ Master Informatik" />
+    			<entry name="fak-studium-studinf-master-seminare.xml" title="Seminare Master Informatik" />
+    			<entry name="fak-studium-studinf-master-praktika.xml" title="Praktika Master Infomatik" />
+    			<entry name="fak-studium-studinf-master-arbeit.xml" title="Masterarbeit Informatik" />
+    		</entry>
+    	</entry>
+		<entry name="fak-studium-studwinf.xml" title="Studium Wirt. Informatik">
+			<entry name="fak-studium-studwinf-ba.xml" title="Studium Wirt. Informatik Bachelor">
+				<entry name="fak-studium-studwinf-ba-aenderung.xml" title=" Änderungen am Modulhandbuch Wirt. Informatik Bachelor" />
+				<entry name="fak-studium-studwinf-ba-fortschritt.xml" title="Fortschrittschema (intensiv) Wirt. Informatik Bachelor" />
+				<entry name="fak-studium-studwinf-ba-studplan07.xml" title="Studienplan ab 07/08 Wirt. Informatik Bachelor " />
+				<entry name="fak-studium-studwinf-ba-studplan09.xml" title="Studienplan ab 09 Wirt. Informatik Bachelor" />
+				
+				<entry name="fak-studium-studwinf-ba-seminare.xml" title="Seminare Wirt. Informatik Bachelor" />
+				<entry name="fak-studium-studwinf-ba-projektstudium.xml" title="Projektstudium Wirt. Informatik Bachelor" />
+				<entry name="fak-studium-studwinf-ba-wahlpflicht.xml" title="Wahlpflicht Wirt. Informatik Bachelor" />
+				<entry name="fak-studium-studwinf-ba-arbeit.xml" title="Bachelor Arbeit Wirt. Informatik" />
+			</entry>
+			<entry name="fak-studium-studwinf-ba.xml" title="Studium Wirt. Informatik Bachelor">
+				<entry name="fak-studium-studwinf-ma-aenderung.xml" title="Änderungen am Modulhandbuch Wirt. Informatik Master">
+				<entry name="fak-studium-studwinf-ma-studplan.xml" title="Studienplan Wirt. Informatik Master">
+				<entry name="fak-studium-studwinf-ma-seminare.xml" title="Seminare Wirt. Informatik Master">
+				<entry name="fak-studium-studwinf-ma-projekt.xml" title="Masterprojekt Wirt. Informatik">
+				<entry name="fak-studium-studwinf-ma-arbeit.xml" title="Masterarbeit Wirt. Informatik">
+			</entry>
+		</entry>
+    </entry>
+	<entry name="fak-forschung.xml" title="Forschung">
+		<entry name="fak-forschung-berichte.xml" title="Technische Berichte" />
+		<entry name="fak-forschung-wissen.xml" title="Wissen und Technologie" />
+		<entry name="fak-forschung-infosys.xml" title="Informationssystem Forschung" />
+	</entry>
+	<entry name="fak-veranstaltungen.xml" title="Lehrveranstaltungen">
+		<entry name="fak-veranstaltungen-weitere0910.xml" title="Veranstaltungen 09/10">
+			<entry name="fak-veranstaltungen-weitere0910-inf.xml" title="Veranstaltungen 09/10 Informatik">
+				<entry name="fak-veranstaltungen-weitere0910-inf-bc.xml" title="Veranstaltungen Informatik Bachelor 09/10" />
+				<entry name="fak-veranstaltungen-weitere0910-inf-ma.xml" title="Veranstaltungen Informatik Master 09/10" />
+			</entry>
+			
+			<entry name="fak-veranstaltungen-weitere0910-winf.xml" title="Veranstaltungen 09/10 Wirt. Informatik">
+				<entry name="fak-veranstaltungen-weitere0910-winf-bc.xml" title="Veranstaltungen Wirt. Informatik Bachelor 09/10" />
+				<entry name="fak-veranstaltungen-weitere0910-winf-ma.xml" title="Veranstaltungen Wirt. Informatik Master 09/10" />
+			</entry>
+		</entry>
+		
+		<entry name="fak-veranstaltungen-weitere1011.xml" title="Veranstaltungen 10/11">
+			<entry name="fak-veranstaltungen-weitere1011-inf.xml" title="Veranstaltungen 10/11 Informatik">
+				<entry name="fak-veranstaltungen-weitere1011-inf-bc.xml" title="Veranstaltungen Informatik Bachelor 10/11" />
+				<entry name="fak-veranstaltungen-weitere1011-inf-ma.xml" title="Veranstaltungen Informatik Master 10/11" />
+			</entry>
+			
+			<entry name="fak-veranstaltungen-weitere1011-winf.xml" title="Veranstaltungen 10/11 Wirt. Informatik">
+				<entry name="fak-veranstaltungen-weitere1011-winf-bc.xml" title="Veranstaltungen Wirt. Informatik Bachelor 10/11" />
+				<entry name="fak-veranstaltungen-weitere1011-winf-ma.xml" title="Veranstaltungen Wirt. Informatik Master 10/11" />
+			</entry>
+		</entry>
+	</entry>
+</entry>
