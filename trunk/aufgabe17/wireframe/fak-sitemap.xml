@@ -31,7 +31,7 @@
     	<entry name="fak-studium-blog.xml" title="Studiendekans Blog" />
     	<entry name="fak-studium-studinf-abamapo.xml" title="ABaMaPo"/>
     	<entry name="fak-studium-studinf.xml" title="Studium Informatik">    		
-    		<entry name="fak-studium-studinf-bachelor.xml title="Studium Bachelor Studiengang Informatik">
+    		<entry name="fak-studium-studinf-bachelor.xml" title="Studium Bachelor Studiengang Informatik">
     			<entry name="fak-studium-studinf-bachelor-modulhandbuch.xml" title="Modulhandbuch Informatik Bachelor" />
     			<entry name="fak-studium-studinf-bachelor-aenderungenModulhb.xml" title="Aenderungen Modulhandbuch Bachelor Informatik" />
     			<entry name="fak-studium-studinf-bachelor-fpo.xml" title="FPO Informatik Bachelor"/>
@@ -41,7 +41,7 @@
     			<entry name="fak-studium-studinf-bachelor-wahlpflicht.xml" title="Wahlpflicht Bachelor Informatik" />
     			<entry name="fak-studium-studinf-bachelor-arbeit.xml" title="Bachelorarbeit Informatik" />
     		</entry>
-    		<entry name="fak-studium-studinf-master.xml title="Studium Master Studiengang Informatik">
+    		<entry name="fak-studium-studinf-master.xml" title="Studium Master Studiengang Informatik">
     			<entry name="fak-studium-studinf-master-modulhandbuch.xml" title="Modulhandbuch Informatik Master" />
     			<entry name="fak-studium-studinf-master-aenderungenModulhb.xml" title="Aenderungen Modulhandbuch Master Informatik" />
     			<entry name="fak-studium-studinf-master-fpo.xml" title="FPO Informatik Master"/> 
@@ -65,11 +65,11 @@
 				<entry name="fak-studium-studwinf-ba-arbeit.xml" title="Bachelor Arbeit Wirt. Informatik" />
 			</entry>
 			<entry name="fak-studium-studwinf-ba.xml" title="Studium Wirt. Informatik Bachelor">
-				<entry name="fak-studium-studwinf-ma-aenderung.xml" title="Änderungen am Modulhandbuch Wirt. Informatik Master">
-				<entry name="fak-studium-studwinf-ma-studplan.xml" title="Studienplan Wirt. Informatik Master">
-				<entry name="fak-studium-studwinf-ma-seminare.xml" title="Seminare Wirt. Informatik Master">
-				<entry name="fak-studium-studwinf-ma-projekt.xml" title="Masterprojekt Wirt. Informatik">
-				<entry name="fak-studium-studwinf-ma-arbeit.xml" title="Masterarbeit Wirt. Informatik">
+				<entry name="fak-studium-studwinf-ma-aenderung.xml" title="Änderungen am Modulhandbuch Wirt. Informatik Master" />
+				<entry name="fak-studium-studwinf-ma-studplan.xml" title="Studienplan Wirt. Informatik Master" />
+				<entry name="fak-studium-studwinf-ma-seminare.xml" title="Seminare Wirt. Informatik Master" />
+				<entry name="fak-studium-studwinf-ma-projekt.xml" title="Masterprojekt Wirt. Informatik" />
+				<entry name="fak-studium-studwinf-ma-arbeit.xml" title="Masterarbeit Wirt. Informatik" />
 			</entry>
 		</entry>
     </entry>

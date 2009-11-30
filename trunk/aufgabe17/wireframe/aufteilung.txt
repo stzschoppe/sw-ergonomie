@@ -1,0 +1,99 @@
+PASCAL:
+
+   * Fakultaet fÃ¼r Informatik
+        * Fakultaet
+            * Aktuelles
+            * Fakultaetsbericht
+            * Hochschuloeffentliche Vortraege
+            * Konferrenzen und Symposien
+            * Informatik-Kolloquium
+            * Vergangene Veranstaltungen
+            * Promotion und Habitilation
+            * Promotionsverfahren
+            * Evaluation
+            * Fotos
+            * E-mail Verteiler
+            * Personenverzeichnis
+            * Stellenausschreibungen
+                * Stellenausschreibungen Professur
+                * Stellenauschreibungen Mitarbeiter
+            * Raeume
+                * Electronic Classroom Belegung
+                * Electronic Classroom Reservierung
+                * Electronic Classroom Ausstattung
+                * Fakulaetsraum Belegung
+                * Fakulaetsraum Reservierung
+                * Fakulaetsraum Anleitung Video-System
+
+SOEREN: 
+
+      * Studiengaenge
+            * LSF
+            * Stundenplaene
+            * Studiendekans Blog
+            * ABaMaPo
+            * Studium Informatik
+                * Studium Bachelor Studiengang Informatik
+                    * Modulhandbuch Informatik Bachelor
+                    * Aenderungen Modulhandbuch Bachelor Informatik
+                    * FPO Informatik Bachelor
+                    * Ergaenzungen Bachelor Informatik
+                    * Seminare Bachelor Informatik
+                    * Praktika Bachelor Infomatik
+                    * Wahlpflicht Bachelor Informatik
+                    * Bachelorarbeit Informatik
+                * Studium Master Studiengang Informatik
+                    * Modulhandbuch Informatik Master
+                    * Aenderungen Modulhandbuch Master Informatik
+                    * FPO Informatik Master
+                    * Studienplan Master Informatik
+                    * FAQ Master Informatik
+                    * Seminare Master Informatik
+                    * Praktika Master Infomatik
+                    * Masterarbeit Informatik
+
+
+STEPHAN:
+
+ * Forschung
+            * Technische Berichte
+            * Wissen und Technologie
+            * Informationssystem Forschung
+        * Lehrveranstaltungen
+            * Veranstaltungen 09/10
+                * Veranstaltungen 09/10 Informatik
+                    * Veranstaltungen Informatik Bachelor 09/10
+                    * Veranstaltungen Informatik Master 09/10
+                * Veranstaltungen 09/10 Wirt. Informatik
+                    * Veranstaltungen Wirt. Informatik Bachelor 09/10
+                    * Veranstaltungen Wirt. Informatik Master 09/10
+            * Veranstaltungen 10/11
+                * Veranstaltungen 10/11 Informatik
+                    * Veranstaltungen Informatik Bachelor 10/11
+                    * Veranstaltungen Informatik Master 10/11
+                * Veranstaltungen 10/11 Wirt. Informatik
+                    * Veranstaltungen Wirt. Informatik Bachelor 10/11
+                    * Veranstaltungen Wirt. Informatik Master 10/11
+
+
+THOMAS:
+
+         * Studium Wirt. Informatik
+                * Studium Wirt. Informatik Bachelor
+                    *  Ãnderungen am Modulhandbuch Wirt. Informatik Bachelor
+                    * Fortschrittschema (intensiv) Wirt. Informatik Bachelor
+                    * Studienplan ab 07/08 Wirt. Informatik Bachelor 
+                    * Studienplan ab 09 Wirt. Informatik Bachelor
+                    * Seminare Wirt. Informatik Bachelor
+                    * Projektstudium Wirt. Informatik Bachelor
+                    * Wahlpflicht Wirt. Informatik Bachelor
+                    * Bachelor Arbeit Wirt. Informatik
+                * Studium Wirt. Informatik Bachelor
+                    * Ãnderungen am Modulhandbuch Wirt. Informatik Master
+                    * Studienplan Wirt. Informatik Master
+                    * Seminare Wirt. Informatik Master
+                    * Masterprojekt Wirt. Informatik
+                    * Masterarbeit Wirt. Informatik
+
+
+
