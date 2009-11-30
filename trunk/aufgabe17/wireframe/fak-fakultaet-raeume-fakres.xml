@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<page>
+  <description>
+Einfaches Reservierungssystem in Form eines Kalenders.
+</description>
+  <content>
+	Darstellung der aktuellen und zukünftigen Raumbelegung mit Hilfe eines Kalenders.
+</content>
+</page>

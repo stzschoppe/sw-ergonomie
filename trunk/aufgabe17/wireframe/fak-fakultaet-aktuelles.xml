@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<page>
+  <description>
+	<li>
+	<item>Links zu Projektseiten</item>
+	<item>Kalender kündigt Veranstaltungen an </item>
+	</li>
+</description>
+  <content>
+	Hier können Informationen zu aktuellen Vorgängen, Vorhaben und Veranstaltungen gefunden werden.<br />
+	Dargestellt werden sollte dies in Form eines Kalenders und weiterführender Links zu evtl. Projektseiten.
+</content>
+</page>

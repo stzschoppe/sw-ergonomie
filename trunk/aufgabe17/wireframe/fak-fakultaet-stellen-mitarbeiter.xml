@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<page>
+  <description>
+	Navigation zu einzelnen Stellenausschreibungen für Mitarbeiter.
+</description>
+  <content>
+	Darstellung aller durch Mitarbeiter zu besetzenden Stellen in Form einer Kurzbeschreibung an. Diese Kurzbeschreibungen sind Links zu der vollständigen Stellenausschreibung.
+</content>
+</page>

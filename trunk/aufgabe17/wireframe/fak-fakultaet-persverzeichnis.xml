@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<page>
+  <description>
+Hier wird die Möglichkeit geboten im Personenverzeichnis der Fakultät nach Namen, Stichworten o.ä. zu suchen.
+</description>
+  <content>
+Darstellung eines Suchergebnisses als Tabelle (Name, Vorname, Telefonnummer, Raum, email).
+</content>
+</page>
