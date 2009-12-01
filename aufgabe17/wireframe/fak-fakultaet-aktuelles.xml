@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <page>
   <description>
-	<li>
-	<item>Links zu Projektseiten</item>
-	<item>Kalender kuendigt Veranstaltungen an </item>
-	</li>
+	<ul>
+	<li>Links zu Projektseiten</li>
+	<li>Kalender kuendigt Veranstaltungen an </li>
+	</ul>
 </description>
   <content>
 	Hier koennen Informationen zu aktuellen Vorgaengen, Vorhaben und Veranstaltungen gefunden werden.<br />
