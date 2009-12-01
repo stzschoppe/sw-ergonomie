@@ -40,7 +40,7 @@ font-weight: bold;
 <table style="margin: 20">
 <tr><td width="200" valign="top" id="descriptionPane"> 
 <p id="titlePane"><xsl:value-of select="page/title"/></p>
-<xsl:value-of select="page/description"/>
+<xsl:apply-templates select="page/description" />
 </td>
 <td id="contentPane" valign="top">
 <p><a href="fak-start.html">Home</a> | 
@@ -82,6 +82,9 @@ font-weight: bold;
   </ul>
   </xsl:if>
 </li>
+</xsl:template>
+<xsl:template match="description">
+  <xsl:apply-templates select="*|text()"/>
 </xsl:template>
 <xsl:template match="content">
   <xsl:apply-templates select="*|text()"/>
