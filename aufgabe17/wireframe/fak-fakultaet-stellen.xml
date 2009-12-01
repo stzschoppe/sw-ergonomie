@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <page>
   <description>
-	Navigation zu einzelnen Stellenausschreibungen über die Kurzbeschreibungen. <br />
-	Filtermöglichkeit über die Links Mitarbeiter und Professur.
+	Navigation zu einzelnen Stellenausschreibungen ueber die Kurzbeschreibungen. <br />
+	Filtermoeglichkeit ueber die Links Mitarbeiter und Professur.
 </description>
   <content>
 	Kurzbeschreibung zu aktuellen Stellenausschreibungen (Mitarbeiter und Professur) in Form einer Kombination von Bild, Text und integriertem Link.

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <page>
   <description>
-	Navigation zu den Veranstaltungsseiten. 
+	Navigation zu den Veranstaltungsseiten.  
 </description>
   <content>
 	Die vergangen Veranstaltungen nach Jahren geordnet. Beschrieben werden diese wiedrum durch einen kurzen Beschreibungstext (Redner, Thema...).

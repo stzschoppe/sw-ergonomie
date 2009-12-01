@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <page>
   <description>
-Hier wird die Möglichkeit geboten im Personenverzeichnis der Fakultät nach Namen, Stichworten o.ä. zu suchen.
+Hier wird die Moeglichkeit geboten im Personenverzeichnis der Fakultaet nach Namen, Stichworten usw. zu suchen.
 </description>
   <content>
 Darstellung eines Suchergebnisses als Tabelle (Name, Vorname, Telefonnummer, Raum, email).

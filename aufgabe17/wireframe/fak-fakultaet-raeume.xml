@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <page>
   <description>
-	Navigation zur detailierten Beschreibung der verfügbaren Räume.
+	Navigation zur detailierten Beschreibung der verfuegbaren Raeume.
 </description>
   <content>
-	Kurze Beschreibung der Räume (Ausstattung). Darstellung einer Ampel, die angibt ob der Raum im Moment belegt ist. 
+	Kurze Beschreibung der Raeume (Ausstattung). Darstellung einer Ampel, die angibt ob der Raum im Moment belegt ist. 
 </content>
 </page>
