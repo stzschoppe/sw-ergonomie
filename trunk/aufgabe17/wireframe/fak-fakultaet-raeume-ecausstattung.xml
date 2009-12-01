@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <page>
   <description>
-	Über ein Eingabefeld kann von Mitarbeitern bestimmte Software angefordert werden.
+	Ueber ein Eingabefeld kann von Mitarbeitern bestimmte Software angefordert werden.
 </description>
   <content>
-	Angabe der vorhandenen Hardware und deren Konfiguration, verfügbare Software in Form einer Tabelle. 
+	Angabe der vorhandenen Hardware und deren Konfiguration, verfuegbare Software in Form einer Tabelle. 
 	Hier werden auch besondere Leistungsmerkmale angegeben (2 Bildschirme, Drucker, Scanner, etc.).
 </content>
 </page>
