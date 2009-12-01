@@ -8,12 +8,18 @@
 <style type="text/css">
 body {
 background-color: #E0E0E0;
-font-family: Arial, Helvetica, sans-serif;
-font-size: 11pt;
+font-family: Verdana, Helvetica, sans-serif;
+font-size: 10pt;
 }
 #contentPane {
 padding: 5px;
+padding-top: 80px;
 border: 1px solid black; background-color: #FFFFFF;
+background-image: url(./img/top.png);
+background-repeat: no-repeat;
+width: 790px;
+height: 600px;
+
 }
 #descriptionPane {
 padding: 5px;
@@ -36,7 +42,7 @@ font-weight: bold;
 <p id="titlePane"><xsl:value-of select="page/title"/></p>
 <xsl:value-of select="page/description"/>
 </td>
-<td width="800" height="600" id="contentPane" valign="top">
+<td id="contentPane" valign="top">
 <p><a href="fak-start.html">Home</a> | 
 <xsl:for-each select="page/topics/entry">
 <xsl:element name="a">
