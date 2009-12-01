@@ -22,7 +22,7 @@ font-style: italic;
 }
 #titlePane {
 padding: 5px;
-width: 150px;
+width: 170px;
 border: 1px solid black;
 background-color: #FFFFFF;
 font-weight: bold;
@@ -37,7 +37,7 @@ font-weight: bold;
 <xsl:value-of select="page/description"/>
 </td>
 <td width="800" height="600" id="contentPane" valign="top">
-<p>Topics: | 
+<p><a href="fak-start.html">Home</a> | 
 <xsl:for-each select="page/topics/entry">
 <xsl:element name="a">
     <xsl:attribute name="href">
@@ -48,11 +48,11 @@ font-weight: bold;
 </xsl:for-each>
 </p>
 <table width="100%">
-<tr><td width="40%">
+<tr><td width="40%" valign="top">
 <p>Navigation:</p>
 <xsl:apply-templates select="page/navigation" />
-</td><td>
-<xsl:value-of select="page/content"/>
+</td><td valign="top">
+<xsl:apply-templates select="page/content" />
 </td></tr></table>
 </td></tr></table>
 </body>
@@ -76,5 +76,20 @@ font-weight: bold;
   </ul>
   </xsl:if>
 </li>
+</xsl:template>
+<xsl:template match="content">
+  <xsl:apply-templates select="*|text()"/>
+</xsl:template>
+<xsl:template match="p">
+<p><xsl:apply-templates select="*|text()"/></p>
+</xsl:template>
+<xsl:template match="ul">
+<ul><xsl:apply-templates select="*|text()"/></ul>
+</xsl:template>
+<xsl:template match="li">
+<li><xsl:apply-templates select="*|text()"/></li>
+</xsl:template>
+<xsl:template match="text()">
+<xsl:value-of select="." />
 </xsl:template>
 </xsl:stylesheet>
